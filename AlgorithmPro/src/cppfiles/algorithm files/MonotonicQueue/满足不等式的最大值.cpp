@@ -41,7 +41,7 @@ namespace
 				deque[right++] = i;
 				
 			}
-
+			
 			return ans;
 		}
 	};

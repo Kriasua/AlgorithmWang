@@ -269,6 +269,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\累加和为定值最长子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\表现良好最长时间段.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\静态数组实现前缀树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\template.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\位运算实现加减乘除.cpp" />
     <ClCompile Include="src\cppfiles\grammar study files\MyString.cpp" />
     <ClCompile Include="src\cppfiles\other files\pch.cpp">

@@ -351,6 +351,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\可以安排的最大任务数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\template.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
