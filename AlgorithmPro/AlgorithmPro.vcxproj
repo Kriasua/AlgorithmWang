@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e5d3bfa2-8c53-4cc5-bbf8-28818c1afe35}</ProjectGuid>
+    <RootNamespace>AlgorithmPro</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;PR_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\headerfile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\headerfile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\headerfile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\刀毒打怪兽.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\找出第K小的数对距离.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\服务员提供服务.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\机器人跳楼.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\珂珂吃香蕉.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\电脑同时运行分钟数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\画匠问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\第n个神奇的数字.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Bitset.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\AllOne.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\LRU.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\O(1)时间插入，删除和获取随即元素.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\实时获取数据流的中位数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\最大频率栈.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dataStrctureDesign\设计setAll功能的哈希表.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Difference\一群人跳水.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Difference\等差数列差分.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Difference\航班预定.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\供暖器.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\坐小船.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\寻找重复数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\按奇偶排序数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\接雨水.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\未出现的最小正整数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\盛最多水的容器.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\翻转字符串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Heap.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\GetInterSectionNode.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\K个一组翻转链表.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\mergeKLists.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\判断链表是否为回文.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\合并两个有序链表.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\排序链表.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\求链表入环节点.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\随机链表的复制.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Maths\判断回文数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Maths\超级回文数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Maxcover.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\可以安排的最大任务数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\和至少为k的最短子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\接取落水的最小花盆.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\滑动窗口最大值.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\满足不等式的最大值.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\绝对差不超过限制的最长子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\LargestRectangle.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\二维矩阵里的最大矩形.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\单调栈基础模板.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\去重使字典序最小.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\大きい魚は小さい魚を食べる.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\子数组的最小值之和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\最大宽度破.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\每日温度.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MonotonicStack\统计全1子矩阵的数量.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\QuickSort.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\minimum-operations-to-halve-array-sum.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\missingNumber.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Random.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\n皇后问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\原子数量.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\字符串的全部子序列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\字符串解码.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\找顺子.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\数组全排列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\汉诺塔问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\消灭怪物.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\用递归逆序栈.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\计算器.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\reversePairs.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\singleNumber.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\k个不同整数的子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\加油站.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\替换字串得到平衡字符串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\最小覆盖字串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\最长无重复字符字串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\累加和最短子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\至少有k个重复字符的字串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\sort.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Tabulate\AppleBagMin.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Tabulate\拼好串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Tabulate\牛吃草问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Tabulate\若干连续正整数的和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\二叉树层序遍历的题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\二叉树打家劫舍问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\二叉树的最大，最小深度（递归）.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\修剪搜索二叉树.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\序列化和反序列化.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\数组的全部组合.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\最近公共祖先.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\用前序和中序遍历构造二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\计算完全二叉树的节点个数.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\路径累加和为aim.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证完全二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证平衡二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证搜索二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\j接头密钥.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\WordSearch_II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\使数组和能被p整除.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\前缀和数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\数组中两个数的最大异或值.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\正数负数一样多最长子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\每个元音包含偶数次的最长字串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\累加和为定值子数组数量.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\累加和为定值最长子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\表现良好最长时间段.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TrieTree\静态数组实现前缀树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\位运算实现加减乘除.cpp" />
+    <ClCompile Include="src\cppfiles\grammar study files\MyString.cpp" />
+    <ClCompile Include="src\cppfiles\other files\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\headerfile\Bitset.h" />
+    <ClInclude Include="src\headerfile\Heap.h" />
+    <ClInclude Include="src\headerfile\pch.h" />
+    <ClInclude Include="src\headerfile\Random.h" />
+    <ClInclude Include="src\headerfile\resource.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
