@@ -354,6 +354,15 @@
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\template.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\情侣牵手.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\相似字符串组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\岛屿数量.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
