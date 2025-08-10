@@ -363,6 +363,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\岛屿数量.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\移除最多的同行或同列石头.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
