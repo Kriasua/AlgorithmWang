@@ -272,6 +272,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\template.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\岛屿数量.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\情侣牵手.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\找出知道秘密的所有专家.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\相似字符串组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\移除最多的同行或同列石头.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\位运算实现加减乘除.cpp" />
