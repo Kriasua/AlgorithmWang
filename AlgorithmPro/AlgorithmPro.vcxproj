@@ -270,6 +270,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\表现良好最长时间段.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\静态数组实现前缀树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\template.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\减少恶意软件的传播II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\UnionSet\好路径.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\岛屿数量.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\情侣牵手.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\找出知道秘密的所有专家.cpp" />
