@@ -375,6 +375,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\UnionSet\减少恶意软件的传播II.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
