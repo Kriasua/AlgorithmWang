@@ -151,11 +151,3 @@ namespace
 	};
 }
 
-int main()
-{
-	std::vector<std::vector<int>> grid{ {1,1},{1,0} };
-
-	Solution sol;
-	int a = sol.largestIsland(grid);
-	std::cin.get();
-}

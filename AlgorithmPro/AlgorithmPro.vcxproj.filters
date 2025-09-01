@@ -384,6 +384,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\最大人工岛.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
