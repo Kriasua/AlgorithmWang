@@ -168,6 +168,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\最大人工岛.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\被包围的区域.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
