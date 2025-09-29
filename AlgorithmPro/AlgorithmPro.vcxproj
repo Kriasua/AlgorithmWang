@@ -170,6 +170,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\字典序的拓扑排序.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\火星词典.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\盖章.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
