@@ -168,10 +168,14 @@
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\最大人工岛.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\被包围的区域.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\喧嚣和富有.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\圆桌会议.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\字典序的拓扑排序.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\并行课程3.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\火星词典.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\盖章.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\食物链.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
