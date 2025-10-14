@@ -172,8 +172,12 @@
     <ClCompile Include="src\cppfiles\algorithm files\Graph\圆桌会议.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\字典序的拓扑排序.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\并行课程3.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\最小生成树kruscal算法.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\检查边长度限制的路径是否存在.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\水资源分配优化.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\火星词典.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\盖章.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\繁忙的都市.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\食物链.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
