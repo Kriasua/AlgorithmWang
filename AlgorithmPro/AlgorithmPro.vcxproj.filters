@@ -411,6 +411,36 @@
     <ClCompile Include="src\cppfiles\algorithm files\Graph\圆桌会议.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\最小生成树kruscal算法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\检查边长度限制的路径是否存在.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\水资源分配优化.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Graph\繁忙的都市.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\地图分析.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\贴纸拼词.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\到达角落需要移除障碍物的数目.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\使网格图至少有一种有效路径的最小代价.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\二维接雨水.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\单词接龙II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
