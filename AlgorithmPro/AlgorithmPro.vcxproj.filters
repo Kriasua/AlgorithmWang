@@ -441,6 +441,15 @@
     <ClCompile Include="src\cppfiles\algorithm files\bfs\单词接龙II.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\单词接龙.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\零食问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\最接近目标值的子序列和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">

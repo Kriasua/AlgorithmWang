@@ -139,9 +139,12 @@
     <ClCompile Include="src\cppfiles\algorithm files\bfs\二维接雨水.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\bfs\使网格图至少有一种有效路径的最小代价.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\bfs\到达角落需要移除障碍物的数目.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\单词接龙.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\bfs\单词接龙II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\bfs\地图分析.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\最接近目标值的子序列和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\bfs\贴纸拼词.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\bfs\零食问题.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\刀毒打怪兽.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\找出第K小的数对距离.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\BinarySearch\服务员提供服务.cpp" />
