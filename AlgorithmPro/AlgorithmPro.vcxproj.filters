@@ -450,6 +450,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\bfs\最接近目标值的子序列和.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\dj算法模板.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">

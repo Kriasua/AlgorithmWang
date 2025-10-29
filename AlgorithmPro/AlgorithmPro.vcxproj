@@ -163,6 +163,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Difference\一群人跳水.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Difference\等差数列差分.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Difference\航班预定.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\dj算法模板.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\供暖器.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\坐小船.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\寻找重复数.cpp" />
