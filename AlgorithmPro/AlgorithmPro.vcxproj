@@ -164,6 +164,11 @@
     <ClCompile Include="src\cppfiles\algorithm files\Difference\等差数列差分.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Difference\航班预定.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dijkstra\dj算法模板.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\最小体力消耗路径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\水位上升的泳池中游泳.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\电动车游城市.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\获取所有钥匙的最短路径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dijkstra\飞行路线.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\供暖器.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\坐小船.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\寻找重复数.cpp" />
