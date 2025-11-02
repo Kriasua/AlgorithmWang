@@ -16,6 +16,7 @@
 #include<string>
 #include<queue>
 #include<math.h>
+#include<array>
 namespace
 {
     class Solution {
@@ -27,7 +28,7 @@ namespace
             return curKey & (1 << move);
         }
 
-        void addToQueue(int n, int m,std::vector<std::string>& grid, std::vector<std::vector<std::vector<bool>>>& visited, int i , int j , int curKey,int key, std::vector<int[3]>& queue, int& l, int& r)
+        void addToQueue(int n, int m,std::vector<std::string>& grid, std::vector<std::vector<std::vector<bool>>>& visited, int i , int j , int curKey,int key, std::vector<std::array<int,3>>& queue, int& l, int& r)
         {
 
 
@@ -99,7 +100,7 @@ namespace
                 }
             }
             std::vector<std::vector<std::vector<bool>>> visited(n);
-            std::vector<int[3]> queue(m * n * 64 + 5);
+            std::vector<std::array<int, 3>> queue(m * n * 64 + 5);
             for (auto& col : visited)
             {
                 col.resize(m);
