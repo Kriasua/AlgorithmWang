@@ -185,6 +185,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\环绕字串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\解码方法.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\解码方法II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最小路径和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp" />

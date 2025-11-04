@@ -492,6 +492,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\不同子序列II.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最小路径和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
