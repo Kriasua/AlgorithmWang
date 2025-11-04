@@ -53,6 +53,8 @@ namespace
 				return dp[i1][i2];
 			}
 
+			//其实不需要讨论p1-p4四种情况，详情请看左神视频
+			//像下面的dp解那样两种就行了
 			int ans = 0;
 
 			int p1 = f(text1, text2, i1 + 1, i2 + 1,dp);
@@ -99,16 +101,14 @@ namespace
 				for (int j = m2 - 1; j >= 0; j--)
 				{
 					int ans = 0;
-					int p1 = dp[i+1][j+1];
-					int p2 = dp[i+1][j];
-					int p3 = dp[i][j+1];
-					int p4 = 0;
 					if (text1[i] == text2[j])
 					{
-						p4 = dp[i + 1][j + 1] + 1;
+						ans = dp[i + 1][j + 1] + 1;
 					}
-
-					ans = std::max(std::max(p1, p2), std::max(p3, p4));
+					else
+					{
+						ans = std::max(dp[i + 1][j], dp[i][j + 1]);
+					}
 					dp[i][j] = ans;
 				}
 			}
