@@ -501,6 +501,30 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长公共子序列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\二叉树结构个数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长回文字序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\矩阵最长递增路径.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\不同的子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\字符串距离.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\交错字符串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\有效涂色.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\s1删除最少字符.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">

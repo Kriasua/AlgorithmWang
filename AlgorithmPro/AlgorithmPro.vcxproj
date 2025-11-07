@@ -191,6 +191,11 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长公共子序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长回文字序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\矩阵最长递增路径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\s1删除最少字符.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\不同的子序列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\交错字符串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\字符串距离.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\有效涂色.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp" />
