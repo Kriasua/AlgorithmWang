@@ -540,6 +540,24 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson4\扰乱字符串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\子数组最大累加和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍IV.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\环形数组的最大累加和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\子矩阵最大累加和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
