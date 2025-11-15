@@ -207,6 +207,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍IV.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\环形数组的最大累加和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\乘积最大子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\子序列被7整除.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\魔法卷轴.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp" />
