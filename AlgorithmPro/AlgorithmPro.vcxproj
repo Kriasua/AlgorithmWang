@@ -185,6 +185,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\环绕字串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\解码方法.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1\解码方法II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\买卖股票最佳时机I.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\买卖股票的最佳时机III.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\二叉树结构个数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\单词搜索.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最小路径和.cpp" />
@@ -208,9 +210,11 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍IV.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\环形数组的最大累加和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\三个无重叠子数组的累加和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\乘积最大子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\删掉一个数字后长度为K的最大子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\子序列被7整除.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\翻转一次后子数组最大累加和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\魔法卷轴.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp" />
