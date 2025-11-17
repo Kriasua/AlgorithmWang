@@ -12,14 +12,52 @@ namespace
 	int magicRoll(std::vector<int>& nums)
 	{
 		int n = nums.size();
+		if (n == 0)
+		{
+			return 0;
+		}
+		if (n == 1)
+		{
+			return std::max(nums[0], 0);
+		}
+		//第一种情况，不用卷轴
 		int p1 = 0;
 		for (int num : nums)
 		{
 			p1 += num;
 		}
 
+		//第二种情况，只用一个卷轴
+		int maxPre = nums[0];
+		std::vector<int> preFix(n);
+		maxPre = std::max(maxPre, 0);
+		int sum = nums[0];
+		for (int i = 1; i < n; i++)
+		{
+			sum += nums[i];
+			maxPre = std::max(sum, maxPre);
+			preFix[i] = std::max(preFix[i - 1] + nums[i], maxPre);
+		}
+		int p2 = preFix[n - 1];
 
-	
+		//第三种情况，用两个卷轴
+		std::vector<int> sufFix(n);
+		sum = nums[n-1];
+		int maxSur = std::max(0, nums[n - 1]);
+		for (int i = n - 2; i >= 0; i--)
+		{
+			sum += nums[i];
+			maxSur = std::max(sum, maxSur);
+			sufFix[i] = std::max(sufFix[i + 1] + nums[i], maxSur);
+		}
+		
+		int p3 = INT_MIN;
+		for (int i = 0; i <= n - 2; i++)
+		{
+			p3 = std::max(p3, preFix[i] + sufFix[i + 1]);
+		}
+
+		return std::max(p1, std::max(p2, p3));
 
 	}
 }

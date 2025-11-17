@@ -191,6 +191,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长公共子序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\最长回文字序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\矩阵最长递增路径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2\零钱兑换.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\s1删除最少字符.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\不同的子序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson3\交错字符串.cpp" />
@@ -208,6 +209,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\打家劫舍IV.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson5子数组累加和\环形数组的最大累加和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\乘积最大子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\删掉一个数字后长度为K的最大子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\子序列被7整除.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\魔法卷轴.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
