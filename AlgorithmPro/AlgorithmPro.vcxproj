@@ -216,8 +216,11 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\子序列被7整除.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\翻转一次后子数组最大累加和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\魔法卷轴.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson7最长递增子序列\使数组K递增的最小操作次数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson7最长递增子序列\俄罗斯套娃信封问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson7最长递增子序列\最长数对链.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson7最长递增子序列\最长递增子序列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson7最长递增子序列\有一次修改机会的最长不下降子序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\findNumberAppearKTimes.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\岛屿数量%28flood%29.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp" />
