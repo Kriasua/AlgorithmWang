@@ -30,7 +30,7 @@ namespace
 	};
 
 	//记忆化搜索，用哈希表
-	class Solution1 {
+	class Solution2 {
 	public:
 		int f(std::vector<int>& nums, int target, int i, int sum, std::unordered_map<int, std::unordered_map<int, int>>& dp)
 		{

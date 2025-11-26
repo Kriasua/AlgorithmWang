@@ -12,6 +12,7 @@
 #include<vector>
 #include<algorithm>
 #include<array>
+#include<iostream>
 namespace
 {
 	struct compare
@@ -21,13 +22,15 @@ namespace
 			return a[1] > b[1];
 		}
 	};
-
+	//准备小根堆
 	std::priority_queue<std::array<int,2>, std::vector<std::array<int, 2>>, compare> heap;
 
 	std::vector<int> topKSum(std::vector<int>& nums, int k)
 	{
+		//换一张新的小根堆
 		std::priority_queue<std::array<int, 2>, std::vector<std::array<int, 2>>, compare> tmp;
 		std::swap(heap, tmp);
+
 		std::sort(nums.begin(), nums.end());
 		int index = 0;
 		std::vector<int> ans(k--);
@@ -43,6 +46,11 @@ namespace
 			int mostRight = top[0];
 			if (mostRight < nums.size() - 1)
 			{
+
+				//根据弹出的堆顶，有两种入堆策略：
+				//1.直接加后面的数，入堆
+				//2.把当前最右的数替换成后面的数
+				//本质上就是构造所有的组合
 				auto add1 = top;
 				auto add2 = top;
 				add1[0] =mostRight + 1;
@@ -59,3 +67,4 @@ namespace
 		return ans;
 	}
 }
+
