@@ -633,6 +633,21 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\购买足量干草的最少花费.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包%28多重，混合%29\多重背包.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\桜花見.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\买糖果.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\多重背包单调队列优化.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\能成功找零的钱数种类.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">

@@ -177,11 +177,16 @@
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\未出现的最小正整数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\盛最多水的容器.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\DoublePtr\翻转字符串.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\买糖果.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\从栈中取出K个硬币.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\分组背包模板.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\完全背包模板.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\正则表达式匹配.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\leeson9背包(分组，完全)\购买足量干草的最少花费.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包%28多重，混合%29\多重背包.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\多重背包单调队列优化.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\桜花見.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\能成功找零的钱数种类.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />
