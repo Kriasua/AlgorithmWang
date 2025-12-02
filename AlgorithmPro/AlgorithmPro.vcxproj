@@ -187,6 +187,12 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\多重背包单调队列优化.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\桜花見.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson10背包(多重，混合)\能成功找零的钱数种类.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\切棍子的最小成本.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\多边形三角.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\布尔运算.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\戳气球.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\让串成为回文串的最少插入次数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\预测赢家.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />
