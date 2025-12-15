@@ -57,28 +57,4 @@ namespace
 		}
 	};
 
-	class Solution {
-	public:
-		std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs) {
-			std::vector<std::vector<std::string>> ans;
-			std::unordered_map<std::string, int> map;
-			int index = 0;
-			for (int i = 0; i<strs.size();i++)
-			{
-				std::string str = strs[i];
-				std::sort(str.begin(), str.end());
-				auto it = map.find(str);
-				if (it == map.end())
-				{
-					map.insert({ str, index++ });
-					ans.push_back({ strs[i] });
-				}
-				else
-				{
-					ans[it->second].push_back(strs[i]);
-				}
-			}
-			return ans;
-		}
-	};
 }
