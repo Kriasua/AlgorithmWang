@@ -200,12 +200,17 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\让串成为回文串的最少插入次数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson11区间dp\预测赢家.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\二叉树的直径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\从树中删除边的最小分数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\到达首都的最小油耗.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\在二叉树中分配硬币.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\最大BST子树键值和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\最大BST字树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\没有上司的舞会.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\监控二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\相邻字符不同的最长路径.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\移除字数后的二叉树高度.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\路径总和III.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\选课.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />

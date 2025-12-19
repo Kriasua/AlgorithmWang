@@ -80,7 +80,7 @@ namespace
 	//逻辑正确，但是不是最优解，会内存溢出
 	/*给你数字字符串 s ，请你返回 s 中长度为 5 的 回文子序列 数目。由于答案可能很大，请你将答案对 109 + 7 取余 后返回。*/
 	//测试链接：https://leetcode.cn/problems/count-palindromic-subsequences/description/
-	class Solution {
+	class Solution2 {
 	public:
 		using LL = long long int;
 		int countPalindromes(std::string s) {
