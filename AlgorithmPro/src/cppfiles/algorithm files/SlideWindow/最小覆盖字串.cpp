@@ -36,8 +36,8 @@ namespace
                 
                 while (cnts[s[l]] - 1 >= 0)
                 {
-                    cnts[s[l++]]--;
-
+                    cnts[s[l]]--;
+                    l++;
                 }
                
                 if (debt <= 0)

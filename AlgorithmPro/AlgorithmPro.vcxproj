@@ -211,6 +211,10 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\移除字数后的二叉树高度.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\路径总和III.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson12树形dp\选课.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\TSP问题.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\划分为k个相等子集.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\我能赢吗.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\火柴拼正方形.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />

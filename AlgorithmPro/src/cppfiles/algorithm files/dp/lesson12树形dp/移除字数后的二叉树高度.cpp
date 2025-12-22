@@ -27,7 +27,6 @@ namespace
 
 	class Solution {
 	public:
-
 		const int MAXN = 100005;
 		int n;
 		int count;
