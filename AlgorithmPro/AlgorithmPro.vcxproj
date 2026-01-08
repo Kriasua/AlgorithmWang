@@ -214,6 +214,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\TSP问题.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\划分为k个相等子集.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\我能赢吗.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\最优账单平衡.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\每个人戴不同帽子的方案数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\火柴拼正方形.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
