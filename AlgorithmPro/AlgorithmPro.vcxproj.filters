@@ -567,10 +567,10 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson6子数组累加和下\魔法卷轴.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\买卖股票最佳时机I.cpp">
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票最佳时机I.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\买卖股票的最佳时机III.cpp">
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机III.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\零钱兑换.cpp">
@@ -730,6 +730,24 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\TSP问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\最优账单平衡.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\每个人戴不同帽子的方案数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机II.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机含手续费.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票含冷冻期.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机IV.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

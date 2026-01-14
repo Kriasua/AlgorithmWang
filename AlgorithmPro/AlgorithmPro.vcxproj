@@ -217,6 +217,10 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\最优账单平衡.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\每个人戴不同帽子的方案数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\火柴拼正方形.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票含冷冻期.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机IV.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机含手续费.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />
@@ -225,8 +229,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\环绕字串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\解码方法.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\解码方法II.cpp" />
-    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\买卖股票最佳时机I.cpp" />
-    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\买卖股票的最佳时机III.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票最佳时机I.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机III.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\二叉树结构个数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\单词搜索.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson2二维dp\最小路径和.cpp" />
