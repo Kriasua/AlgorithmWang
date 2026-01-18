@@ -217,10 +217,15 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\最优账单平衡.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\每个人戴不同帽子的方案数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson13状压dp\火柴拼正方形.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\DI序列的有效排列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\K个逆序对数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票含冷冻期.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机IV.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\买卖股票的最佳时机含手续费.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\累加和不大于K的最长子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\自由之路.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\规划兼职工作.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />
