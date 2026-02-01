@@ -226,6 +226,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\累加和不大于K的最长子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\自由之路.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson14优化枚举\规划兼职工作.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson15得到具体方案\LCS其中一个结果.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson15得到具体方案\最小必要团队.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson15得到具体方案\最长递增子序列字典序最小结果.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\不同子序列II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\丑数II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson1一维dp\斐波那契数列.cpp" />
