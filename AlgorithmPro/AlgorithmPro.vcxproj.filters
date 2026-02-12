@@ -774,6 +774,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\dp\lesson15得到具体方案\最长递增子序列字典序最小结果.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\dp\lesson16根据体量猜解法\贿赂怪兽.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\headerfile\Bitset.h">
