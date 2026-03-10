@@ -35,7 +35,6 @@ namespace
             
             return left ? left : right;
 
-
         }
     };
 

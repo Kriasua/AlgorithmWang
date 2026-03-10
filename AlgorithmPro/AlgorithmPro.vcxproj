@@ -301,7 +301,23 @@
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\HashMap\统计有多少个不同字符串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Heap.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\两两交换链表中的节点.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\两数之和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\二叉搜索树中第k小的元素.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\二叉树展开为链表.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\二叉树的右视图.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\二叉树的最大路径和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\分割等和子集.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\对称二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\找到字符串中所有字母异位词.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\最长连续序列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\合并区间.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\有序数组转二叉搜索树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\腐烂的橘子.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\轮转数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\除了自身以外数组的乘积.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\GetInterSectionNode.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
