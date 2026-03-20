@@ -1,7 +1,7 @@
 #include<vector>
 #include<cmath>
 #include<iostream>
-namespace Welly
+namespace
 {
     class Solution {
     public:

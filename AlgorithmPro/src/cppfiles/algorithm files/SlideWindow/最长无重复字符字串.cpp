@@ -3,6 +3,7 @@
 // 测试链接 : https://leetcode.cn/problems/longest-substring-without-repeating-characters/
 #include<string>
 #include<unordered_map>
+#include<unordered_set>
 #include<array>
 namespace
 {
@@ -43,4 +44,29 @@ namespace
             return ans;
         }
     };
+
+    //第二次做
+	class Solution2 {
+	public:
+		int lengthOfLongestSubstring(std::string s) {
+            int ans = 0;
+            std::unordered_set<char> set;
+            int left = 0;
+            int right = 0;
+
+            for (; left < s.size(); left++)
+            {
+                while (right < s.size() && !set.contains(s[right]))
+                {
+                    set.emplace(s[right]);
+                    right++;
+                }
+
+                ans = std::max(ans, right - left);
+                set.erase(s[left]);
+            }
+
+            return ans;
+		}
+	};
 }
