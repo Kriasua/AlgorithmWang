@@ -313,6 +313,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\分割回文串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\分割等和子集.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\前K个高频元素.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\和为K的子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\子集.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\实现前缀树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\对称二叉树.cpp" />
@@ -325,6 +326,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\最长连续序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\合并区间.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\有序数组转二叉搜索树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\柱状图中最大的矩形.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\矩阵置零.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\组合总和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\腐烂的橘子.cpp" />

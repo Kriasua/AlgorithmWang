@@ -6,7 +6,7 @@
 #include<vector>
 
 namespace
-{
+{ 
 	class Solution {
 	public:
 		int largestRectangleArea(std::vector<int>& heights, std::vector<int> stack) {

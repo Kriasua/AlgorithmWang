@@ -46,5 +46,44 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution {
+	public:
+
+		void push(std::vector<int>& queue, int i, int& left, int& right, std::vector<int>& nums)
+		{
+			while (left != right && nums[i] >= nums[queue[right - 1]])
+			{
+				right--;
+			}
+
+			queue[right++] = i;
+		}
+
+		std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
+			int n = nums.size();
+			std::vector<int> ans;
+			std::vector<int> queue(n);
+
+			int left = 0;
+			int right = 0;
+
+			for (int i = 0; i < k-1; i++)
+			{
+				push(queue, i, left, right, nums);
+			}
+
+			for (int i = k - 1; i < n; i++)
+			{
+				push(queue, i, left, right, nums);
+				ans.push_back(nums[queue[left]]);
+				if (i - k + 1 == queue[left])
+				{
+					left++;
+				}
+			}
+			return ans;
+		}
+	};
 }
 
