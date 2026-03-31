@@ -111,9 +111,6 @@
     <ClCompile Include="src\cppfiles\algorithm files\位运算实现加减乘除.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\cppfiles\grammar study files\MyString.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\Main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -874,6 +871,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\分割回文串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\和为K的子数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\柱状图中最大的矩形.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
