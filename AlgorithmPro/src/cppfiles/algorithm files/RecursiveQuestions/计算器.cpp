@@ -159,6 +159,106 @@ namespace welly
             return f(s, 0);
         }
     };
+
+    //第二次做
+	class Solution3 {
+	public:
+
+        void push(std::vector<int>& nums, std::vector<char>& ops, int cur, char op)
+        {
+			if (ops.empty())
+			{
+				nums.push_back(cur);
+				ops.push_back(op);
+			}
+			else if (ops.back() == '+' || ops.back() == '-')
+			{
+				nums.push_back(cur);
+				ops.push_back(op);
+			}
+			else if (ops.back() == '*')
+			{
+				int tmp = cur * nums.back();
+				nums.pop_back();
+				ops.pop_back();
+				nums.push_back(tmp);
+				ops.push_back(op);
+			}
+			else
+			{
+				int tmp = nums.back() / cur;
+				nums.pop_back();
+				ops.pop_back();
+				nums.push_back(tmp);
+				ops.push_back(op);
+			}
+            
+        }
+
+        std::vector<int> f(std::string s, int i)
+        {
+            std::vector<int> nums;
+            std::vector<char> ops;
+            int cur = 0;
+            ops.push_back('+');
+            int ans = 0;
+            while (i < s.size())
+            {
+                if (s[i] >= '0' && s[i] <= '9')
+                {
+                    cur = cur * 10 + (s[i] - '0');
+                    i++;
+                }
+
+                else if (s[i] == '+' || s[i] == '-' || s[i] == '*' || s[i] == '/')
+                {
+                    push(nums, ops, cur, s[i]);
+                    cur = 0;
+                    i++;
+                }
+                else if (s[i] == '(')
+                {
+                    std::vector<int> val = f(s, i + 1);
+                    cur = val[0];
+                    i = val[1] + 1;
+                }
+                else
+                {
+                    push(nums, ops, cur, '+');
+                    for (int j = 0; j < nums.size(); j++)
+                    {
+                        if (ops[j] == '+')
+                        {
+                            ans += nums[j];
+                        }
+                        else
+                        {
+                            ans -= nums[j];
+                        }
+                    }
+                    return { ans,i };
+                }
+            }
+
+            push(nums, ops, cur, '+');
+			for (int i = 0; i < nums.size(); i++)
+			{
+				if (ops[i] == '+')
+				{
+					ans += nums[i];
+				}
+				else
+				{
+					ans -= nums[i];
+				}
+			}
+            return { ans,i };
+        }
+
+		int calculate(std::string s) {
+            return f(s, 0)[0];
+		}
+	};
 }
 
 

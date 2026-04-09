@@ -47,7 +47,7 @@ namespace
 		}
 	};
 
-	class Solution {
+	class Solution1 {
 	public:
 
 		void push(std::vector<int>& queue, int i, int& left, int& right, std::vector<int>& nums)

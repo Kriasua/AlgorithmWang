@@ -41,7 +41,7 @@ namespace
 		}
 	};
 
-	class Solution {
+	class Solution1 {
 	public:
 		std::vector<std::vector<int>> ans;
 

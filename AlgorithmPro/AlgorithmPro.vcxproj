@@ -298,6 +298,12 @@
     <ClCompile Include="src\cppfiles\algorithm files\Graph\繁忙的都市.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\食物链.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\两地调度.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\会议室II.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\吃掉N个橘子的最小天数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\最大数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\课程表III.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\连接棒材的最低费用.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -335,6 +341,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\轮转数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\除了自身以外数组的乘积.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Interview\讯夜灯杖交接.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Interview\贪吃蛇.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\GetInterSectionNode.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -427,6 +434,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证完全二叉树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证平衡二叉树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证搜索二叉树.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\TreeHighFrequencyQuestions\验证是不是二叉搜索树的后序遍历.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\j接头密钥.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\WordSearch_II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\TrieTree\使数组和能被p整除.cpp" />
