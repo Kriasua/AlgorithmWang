@@ -285,6 +285,9 @@
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\打砖块.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\最大人工岛.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\被包围的区域.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\GameTheory\BashGame.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\GameTheory\NimGame.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\GameTheory\拿质数的自然数次方石子.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\喧嚣和富有.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\圆桌会议.cpp" />
@@ -342,6 +345,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\除了自身以外数组的乘积.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Interview\讯夜灯杖交接.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Interview\贪吃蛇.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\KMP\KMP模板.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\KMP\另一棵树的子树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\GetInterSectionNode.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>

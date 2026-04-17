@@ -35,10 +35,3 @@ namespace
 	};
 }
 
-int main()
-{
-	std::vector<int> nums = { 2,4,3 };
-	Solution sol;
-	int cost = sol.connectSticks(nums);
-	int a = 2;
-}
