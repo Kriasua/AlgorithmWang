@@ -287,6 +287,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\FloodFill\被包围的区域.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GameTheory\BashGame.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GameTheory\NimGame.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\GameTheory\三堆石头拿斐波那契数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GameTheory\拿质数的自然数次方石子.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\GetMaxWithoutJudge.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\喧嚣和富有.cpp" />
@@ -301,10 +302,16 @@
     <ClCompile Include="src\cppfiles\algorithm files\Graph\繁忙的都市.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\课程表（拓扑排序模板）.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Graph\食物链.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\两个0和1数量相等区间的最大长度.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\两地调度.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\会议室II.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\吃掉N个橘子的最小天数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\平均值最小累加和.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\执行所有任务需要的初始电量.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\最大数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\最小区间.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\最短无序连续子数组.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Greedy\组团买票.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\课程表III.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Greedy\连接棒材的最低费用.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\hammingDistance.cpp">
@@ -370,6 +377,12 @@
     </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\Maths\判断回文数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Maths\超级回文数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\乘法快速幂.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\快速幂斐波那契数列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\泰伯纳期数列.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\矩阵快速幂.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\统计元音字母序列个数.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\MatrixQuickPower\铺瓷砖.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Maxcover.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\可以安排的最大任务数.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\MonotonicQueue\和至少为k的最短子数组.cpp" />
