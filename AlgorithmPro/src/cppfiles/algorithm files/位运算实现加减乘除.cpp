@@ -62,3 +62,63 @@ namespace {
 		std::cout << std::endl;
 	}
 }
+
+
+
+class 位运算实现加减乘除
+{
+	using LL = long long int;
+public:
+	int add(int a, int b)
+	{
+		int ans = a ^ b;
+		int carry = (a & b) << 1;
+		while (carry != 0)
+		{
+			int tmpA = ans;
+			int tmpB = carry;
+			ans = tmpA ^ tmpB;
+			carry = (tmpA & tmpB) << 1;
+		}
+
+		return ans;
+	}
+
+	int addRecur(int a, int b)
+	{
+		int ans = a ^ b;
+		int carry = (a & b) << 1;
+		if (carry == 0)
+		{
+			return ans;
+		}
+		
+		return addRecur(ans, carry);
+	}
+
+	int neg(int a)
+	{
+		return addRecur(~a, 1);
+	}
+
+	int minus(int a, int b)
+	{
+		return addRecur(a, neg(b));
+	}
+
+	int multiply(int a, int b)
+	{
+		int A = a;
+		int B = b;
+		int ans = 0;
+		for (int i = 0; i < 32; i++)
+		{
+			if (((1 << i) & B) != 0)
+			{
+				ans = add(ans,(A << i));
+			}
+		}
+
+		return ans; 
+	}
+};

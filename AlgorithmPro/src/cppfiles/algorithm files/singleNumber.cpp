@@ -47,5 +47,41 @@ namespace {
 
         
     };
+
+	class Solution2 {
+	public:
+		vector<int> singleNumber(vector<int>& nums) {
+            vector<int> ans(2);
+            int axorb = 0;
+            for (int num : nums)
+            {
+                axorb ^= num;
+            }
+
+            int rightestOne;
+            if (axorb == INT_MIN)
+            {
+                rightestOne = axorb;
+            }
+            else
+            {
+                rightestOne = axorb & (~axorb + 1);
+            }
+           
+
+            int groupA = 0;
+            for (int num : nums)
+            {
+                if ((rightestOne & num) != 0)
+                {
+                    groupA ^= num;
+                }
+            }
+
+            ans[0] = groupA;
+            ans[1] = axorb ^ groupA;
+            return ans;
+		}
+	};
 }
 

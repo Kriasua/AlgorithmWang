@@ -9,6 +9,7 @@
 // ≤‚ ‘¡¥Ω” : https://leetcode.cn/problems/course-schedule-iii/
 #include<vector>
 #include<queue>
+#include<algorithm>
 
 
 namespace

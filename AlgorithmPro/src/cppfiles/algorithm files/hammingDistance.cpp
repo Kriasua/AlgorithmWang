@@ -23,5 +23,20 @@ namespace{
         }
     };
 
+
+	int hammingDistance(int x, int y) {
+        int eor = x ^ y;
+        int ans = 0;
+        for (int i = 0; i < 32; i++)
+        {
+            if (((1 << i) & eor) != 0)
+            {
+                ans++;
+            }
+        }
+
+        return ans;
+	}
+
 }
 
