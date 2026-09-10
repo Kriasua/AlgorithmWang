@@ -62,6 +62,66 @@ namespace
 
 			return ans;
 		}
+	};
 
+	class Solution2 {
+	public:
+		int splitArray(std::vector<int>& nums, int k) {
+			int Min = INT_MAX;
+			int Max = 0;
+			LL sum = 0;
+			for (int num : nums)
+			{
+				Min = std::min(Min, num);
+				Max = std::max(Max, num);
+				sum += num;
+			}
+
+			int left = Max;
+			int right = sum;
+			int ans = INT_MAX;
+			while (left <= right)
+			{
+				int middle = left + (right - left) / 2;
+				int curSplit = f(middle, nums);
+				if (curSplit <= k)
+				{
+					ans = middle;
+					right = middle - 1;
+				}
+				else
+				{
+					left = middle + 1;
+				}
+			}
+
+			return ans;
+
+		}
+
+		int f(LL limit, std::vector<int>& nums)
+		{
+			int ans = 0;
+			int curSum = 0;
+			for (int num : nums)
+			{
+				if (curSum + num <= limit)
+				{
+					curSum += num;
+				}
+				else
+				{
+					ans++;
+					curSum = num;
+				}
+			}
+
+			if (curSum != 0)
+			{
+				ans++;
+			}
+
+			return ans;
+		}
 	};
 }

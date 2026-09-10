@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <array>
+#include<vector>
 namespace
 {
 	constexpr int MAX = 100001;
@@ -79,3 +80,75 @@ namespace
 		}
 	}
 }
+
+namespace Review
+{
+	constexpr int MAXN = 100005;
+	int N;
+	std::vector<int> builds(MAXN);
+
+	bool f(int energy, int maxHeight)
+	{
+		int curE = energy;
+		for (int i = 1; i <= N; i++)
+		{
+			curE += (curE - builds[i]);
+			if (curE < 0)
+			{
+				return false;
+			}
+			if (curE >= maxHeight)
+			{
+				return true;
+			}
+		}
+		return true;
+	}
+
+	int calculate()
+	{
+		int Max = 0;
+		for (int i = 1; i <= N; i++)
+		{
+			Max = std::max(Max, builds[i]);
+		}
+
+		int left = 0;
+		int right = Max;
+		int ans = INT_MAX;
+		while (left <= right)
+		{
+			int middle = left + (right - left) / 2;
+			if (f(middle,Max))
+			{
+				ans = middle;
+				right = middle - 1;
+
+			}
+			else
+			{
+				left = middle + 1;
+			}
+		}
+
+		return ans;
+	}
+
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		std::cin.tie(nullptr);
+		while (std::cin >> N)
+		{
+			for (int i = 1; i <= N; i++)
+			{
+				std::cin >> builds[i];
+			}
+
+			std::cout << calculate() << "\n";
+		}
+
+	}
+}
+
+

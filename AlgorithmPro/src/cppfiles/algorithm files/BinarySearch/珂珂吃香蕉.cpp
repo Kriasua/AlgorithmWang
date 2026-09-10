@@ -53,5 +53,54 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution2 {
+	public:
+		int minEatingSpeed(std::vector<int>& piles, int h) {
+			int max = 0;
+			for (int num : piles)
+			{
+				max = num >= max ? num : max;
+			}
+
+			int left = 1;
+			int right = max;
+			int ans = INT_MAX;
+			while (left <= right)
+			{
+				int middle = left + (right - left) / 2;
+				if (ifKEnough(middle, piles, h))
+				{
+					ans = middle;
+					right = middle - 1;
+				}
+				else
+				{
+					left = middle + 1;
+				}
+			}
+
+			return ans;
+
+		}
+
+		bool ifKEnough(int k, std::vector<int>& piles, int h)
+		{
+			long long int time = 0;
+			for (int banana : piles)
+			{
+				time += (banana / k);
+				time += banana % k == 0 ? 0 : 1;
+			}
+			if (time <= h)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	};
 }
 
