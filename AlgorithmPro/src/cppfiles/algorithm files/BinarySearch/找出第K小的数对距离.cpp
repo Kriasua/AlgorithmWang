@@ -54,4 +54,58 @@ namespace
 
 		}
 	};
+
+	class Solution2 {
+	public:
+		int smallestDistancePair(std::vector<int>& nums, int k) {
+			int ans = INT_MAX;
+			std::sort(nums.begin(),nums.end());
+			int Min = INT_MAX;
+			int Max = 0;
+			for (int num : nums)
+			{
+				Max = std::max(Max, num);
+				Min = std::min(Min, num);
+			}
+
+			int left = 0;
+			int right = Max - Min;
+
+			while (left <= right)
+			{
+				int middle = left + (right - left) / 2;
+				int m = f(middle, nums);
+				if (m >= k)
+				{
+					right = middle - 1;
+					ans = middle;
+				}
+				else
+				{
+					left = middle + 1;
+				}
+			}
+
+			return ans;
+
+
+		}
+
+		int f(int limit, std::vector<int>& nums)
+		{
+			int l = 0;
+			int r = 1;
+			int cnt = 0;
+			for (; r < nums.size(); r++)
+			{
+				while ((l <= r) && (nums[r] - nums[l]) > limit)
+				{
+					l++;
+				}
+
+				cnt += (r - l);
+			}
+			return cnt;
+		}
+	};
 }

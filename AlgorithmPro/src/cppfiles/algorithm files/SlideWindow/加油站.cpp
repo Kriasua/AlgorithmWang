@@ -49,5 +49,47 @@ namespace
             return -1;
         }
     };
+
+	class Solution2 {
+	public:
+		int canCompleteCircuit(std::vector<int>& gas, std::vector<int>& cost) {
+            long long int total = 0;
+            for (int i = 0; i < gas.size(); i++)
+            {
+                gas[i] -= cost[i];
+                total += gas[i];
+            }
+            if (total < 0)
+            {
+                return -1;
+            }
+
+            int n = gas.size();
+            int l = 0, r = 0;
+            while (l < n)
+            {
+                int sum = 0;
+                int cnt = n;
+                while (sum >= 0 && cnt > 0)
+                {
+                    sum += gas[r % n];
+                    cnt--;
+                    r++;
+                }
+
+                if (cnt == 0 && sum >= 0)
+                {
+                    return l;
+                }
+                else
+                {
+                    l = r  % n;
+                    r = l;
+                }
+            }
+
+            return -1;
+		}
+	};
 }
 

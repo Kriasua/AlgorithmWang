@@ -28,4 +28,28 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int maxArea(std::vector<int>& height) {
+            int left = 0;
+            int right = height.size() - 1;
+            int ans = 0;
+
+            while (left < right)
+            {
+                ans = std::max(ans, (right - left) * std::min(height[left], height[right]));
+                if (height[left] <= height[right])
+                {
+                    left++;
+                }
+                else
+                {
+                    right--;
+                }
+            }
+
+            return ans;
+		}
+	};
 }

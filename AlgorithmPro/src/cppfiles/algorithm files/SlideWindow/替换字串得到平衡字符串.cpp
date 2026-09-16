@@ -9,6 +9,7 @@
 
 #include<string>
 #include<array>
+#include<unordered_map>
 namespace
 {
     class Solution {
@@ -95,4 +96,68 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int balancedString(std::string s) {
+            int n = s.size() / 4;
+            std::unordered_map<char, int> map;
+            for (char c : s)
+            {
+                if (map.contains(c))
+                {
+                    map[c]++;
+                }
+                else
+                {
+                    map[c] = 1;
+                }
+            }
+
+            int need = 0;
+            for (auto& kv : map)
+            {
+                kv.second -= n;
+                if (kv.second >= 0)
+                {
+                    need += kv.second;
+                }
+            }
+
+            if (need == 0)
+            {
+                return 0;
+            }
+
+            int ans = INT_MAX;
+            int l = 0; 
+            int r = 0;
+            for (; r < s.size(); r++)
+            {
+                if (map.contains(s[r]))
+                {
+                    map[s[r]]--;
+                    if (map[s[r]] >= 0)
+                    {
+                        need--;
+                    }
+                }
+
+                while (need == 0 && l <= r)
+                {
+                    ans = std::min(ans, (r - l + 1));
+                    if (map.contains(s[l]))
+                    {
+                        map[s[l]]++;
+                        if (map[s[l]] > 0)
+                        {
+                            need++;
+                        }
+                    }
+                    l++;
+                }
+            }
+            return ans;
+		}
+	};
 }

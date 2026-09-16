@@ -69,4 +69,25 @@ namespace
             return ans;
 		}
 	};
+
+	class Solution3 {
+	public:
+		int lengthOfLongestSubstring(std::string s) {
+            std::unordered_set<char> set;
+            int size = s.size();
+            int ans = 0;
+            for (int r = 0, l = 0; r < size; r++)
+            {
+                while (set.contains(s[r]))
+                {
+                    set.erase(s[l++]);
+                }
+
+                ans = std::max(ans, (r - l + 1));
+                set.emplace(s[r]);
+            }
+
+            return ans;
+		}
+	};
 }

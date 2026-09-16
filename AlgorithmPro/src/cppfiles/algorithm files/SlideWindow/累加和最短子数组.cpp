@@ -31,4 +31,41 @@ namespace
             return ans == INT_MAX ? 0 : ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int minSubArrayLen(int target, std::vector<int>& nums) {
+            int n = nums.size();
+            std::vector<int> sum(n + 1);
+            for (int i = 1; i <= n; i++)
+            {
+                sum[i] = sum[i - 1] + nums[i - 1];
+            }
+
+            int ans = INT_MAX;
+
+            if (sum.back() < target)
+            {
+                return 0;
+            }
+
+            for (int l = 0, r = 0; l <= n; l++)
+            {
+                while (r <= n && (sum[r] - sum[l]) < target)
+                {
+                    r++;
+                }
+
+                if (r == n + 1)
+                {
+                    break;
+                }
+
+                ans = std::min(ans, (r - l));
+
+            }
+
+            return ans;
+		}
+	};
 }

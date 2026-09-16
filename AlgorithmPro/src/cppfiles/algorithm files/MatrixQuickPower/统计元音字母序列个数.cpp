@@ -88,13 +88,14 @@ namespace
 			return ans % MOD;
 		}
 	};
-}
 
-int main()
-{
-	Solution sol;
-	for (int i = 1; i < 20; i++)
+	int main()
 	{
-		std::cout << sol.countVowelPermutation(i) << "\n";
+		Solution sol;
+		for (int i = 1; i < 20; i++)
+		{
+			std::cout << sol.countVowelPermutation(i) << "\n";
+		}
 	}
 }
+

@@ -102,5 +102,73 @@ namespace
 		std::uniform_int_distribution<> distrib(0, MAX);
 		return distrib(gen);
 	}
+
+	struct cmp
+	{
+		bool operator()(const std::pair<int, int>& a, const std::pair<int, int>& b) const
+		{
+			return a.first > b.first;
+		}
+	};
+
+	int waitingTime3(std::vector<int>& waitors, int m)
+	{
+		std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, cmp> heap;
+		for (int time : waitors)
+		{
+			heap.push({ 0,time });
+		}
+
+		for (int i = 0; i < m; i++)
+		{
+			std::pair<int, int> top = heap.top();
+			heap.pop();
+			top.first += top.second;
+			heap.push(top);
+		}
+
+		return heap.top().first;
+	}
+
+	int f1(int limit, std::vector<int>& waitors)
+	{
+		//给定一个时间limit，能服务多少人
+
+		int cnt = 0;
+		for (int num : waitors)
+		{
+			cnt += (limit / num + 1);
+		}
+		return cnt;
+	}
+
+	int waitingTime4(std::vector<int>& waitors, int m)
+	{
+		int maxTime = 0;
+		for (int num : waitors)
+		{
+			maxTime = std::max(maxTime, num);
+		}
+
+		int left = 0;
+		int right = maxTime * m;
+		int ans = INT_MAX;
+		while (left <= right)
+		{
+			int middle = left + (right - left) / 2;
+			int k = f1(middle, waitors);
+			if (k >= m+1)
+			{
+				ans = middle;
+				right = middle - 1;
+			}
+			else
+			{
+				left = middle + 1;
+			}
+		}
+
+		return ans;
+	}
 }
 

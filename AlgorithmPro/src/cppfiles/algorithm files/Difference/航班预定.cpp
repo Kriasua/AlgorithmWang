@@ -36,4 +36,26 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
+            vector<int> help(n + 2);
+            vector<int> ans(n);
+
+            for (auto& booking : bookings)
+            {
+                help[booking[0]] += booking[2];
+                help[booking[1] + 1] -= booking[2];
+            }
+
+            ans[0] = help[1];
+            for (int i = 1; i < n; i++)
+            {
+                ans[i] = ans[i - 1] + help[i + 1];
+            }
+
+            return ans;
+		}
+	};
 }

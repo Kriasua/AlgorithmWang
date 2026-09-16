@@ -38,4 +38,44 @@ namespace
             return nums;
         }
     };
+
+	class Solution2 {
+	public:
+		void swap(std::vector<int>& nums, int a, int b)
+		{
+			int temp = nums[a];
+			nums[a] = nums[b];
+			nums[b] = temp;
+		}
+
+		std::vector<int> sortArrayByParityII(std::vector<int>& nums) {
+            int odd = 1;
+            int even = 0;
+            int n = nums.size() - 1;
+
+            while (even <= n && odd <= n)
+            {
+				if (nums[n] % 2 == 0)
+				{
+					swap(nums, n, even);
+					even += 2;
+				}
+                else
+                {
+                    swap(nums, n, odd);
+                    odd += 2;
+                }
+            }
+
+            return nums;
+		}
+	};
+}
+
+int main()
+{
+    std::vector<int> nums = { 4,2,5,7 };
+    Solution2 sol;
+    sol.sortArrayByParityII(nums);
+    int i = 1;
 }

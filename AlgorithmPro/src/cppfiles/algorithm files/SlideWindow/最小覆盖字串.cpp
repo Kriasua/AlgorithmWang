@@ -4,6 +4,7 @@
 // ≤‚ ‘¡¥Ω” : https://leetcode.cn/problems/minimum-window-substring/
 #include<string>
 #include<array>
+#include<unordered_map>
 namespace
 {
     class Solution {
@@ -60,7 +61,75 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		std::string minWindow(std::string s, std::string t) {
+            std::unordered_map<char, int> map;
+            {
+                for (char C : t)
+                {
+                    if (map.contains(C))
+                    {
+                        map[C]++;
+                    }
+                    else
+                    {
+                        map.emplace(C, 1);
+                    }
+                }
+
+                int l = 0;
+                int r = 0;
+                int ansL = INT_MAX;
+                int start = 0;
+                int end = 0;
+                std::string ans = "";
+                int need = t.size();
+
+                for (; r < s.size(); r++)
+                {
+
+					if (map.contains(s[r]))
+					{
+						map[s[r]]--;
+						if (map[s[r]] >= 0)
+						{
+							need--;
+						}
+					}
+
+                    while (need == 0)
+                    {
+                        if (ansL >= (r - l + 1))
+                        {
+							ansL = r - l + 1;
+                            start = l;
+                            end = r;     
+                        }
+
+                        if (map.contains(s[l]))
+                        {
+                            map[s[l]]++;
+                            if (map[s[l]] > 0)
+                            {
+                                need++;
+                            }
+                        }
+                        l++;
+                    }
+
+
+                }
+
+
+                return ansL == INT_MAX ? "" : s.substr(start,(end - start + 1));
+            }
+		}
+	};
 }
+
+
 
 
 

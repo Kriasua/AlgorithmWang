@@ -148,6 +148,7 @@ namespace Review
 			std::cout << calculate() << "\n";
 		}
 
+		return 1;
 	}
 }
 

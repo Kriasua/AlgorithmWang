@@ -5,6 +5,7 @@
 // ≤‚ ‘¡¥Ω” : https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/
 #include<string>
 #include<vector>
+#include<unordered_map>
 namespace
 {
     class Solution {
@@ -51,4 +52,12 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int longestSubstring(std::string s, int k) {
+            std::unordered_map<char, int> map;
+
+		}
+	};
 }
