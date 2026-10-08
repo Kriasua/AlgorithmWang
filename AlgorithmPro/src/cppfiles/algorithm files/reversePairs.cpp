@@ -1,5 +1,8 @@
 #include<vector>
 #include "pch.h"
+//翻转对
+//https://leetcode.cn/problems/reverse-pairs/description/
+
 
 namespace {
     using std::vector;
@@ -62,4 +65,89 @@ namespace {
         Counts(nums, 0, nums.size() - 1, ans);
         return ans;
     }
+
+	class Solution {
+	public:
+
+        int count(std::vector<int>& nums, std::vector<int>& help, int l, int r)
+        {
+            if (l >= r)
+            {
+                return 0;//只剩一个数或越界，自然是没有翻转对
+            }
+
+
+            int middle = l + (r - l) / 2;
+            int leftCnt = count(nums, help, l, middle);//切成两边，各自去算，收答案上来
+            int rightCnt = count(nums, help, middle + 1, r);
+            int ans = leftCnt + rightCnt;
+
+            int a = l;
+            int b = middle + 1;
+            while (a <= middle && b <= r)
+            {
+                if (nums[a] <= (long long int)2 * nums[b])
+                {
+                    a++;
+                }
+                else
+                {
+                    ans += (middle - a + 1);
+                    b++;
+                }
+            }
+
+
+
+			a = l;
+			b = middle + 1;
+            int i = a;
+			while (a <= middle && b <= r)
+			{
+				if (nums[a] <= nums[b])
+				{
+                    help[i] = nums[a];
+					a++;
+                    i++;
+				}
+				else
+				{
+                    help[i] = nums[b];
+					b++;
+                    i++;
+				}
+			}
+
+            while (a <= middle)
+            {
+                
+                 help[i] = nums[a];
+                 a++;
+                 i++;
+                
+            }
+            while (b <= r)
+            {
+				
+			    help[i] = nums[b];
+			    b++;
+                i++;
+				
+            }
+
+            for (int i = l; i <= r; i++)
+            {
+                nums[i] = help[i];
+            }
+
+            return ans;
+
+
+        }
+
+		int reversePairs(std::vector<int>& nums) {
+            std::vector<int> help(nums.size());
+            return count(nums, help, 0, nums.size() - 1);
+		}
+	};
 }

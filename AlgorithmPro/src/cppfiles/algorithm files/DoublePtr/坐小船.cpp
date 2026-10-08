@@ -55,4 +55,39 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int numRescueBoats(std::vector<int>& people, int limit) {
+            std::sort(people.begin(), people.end());
+            int ans = 0;
+            int l = 0;
+            int r = people.size() - 1;
+            while (l <= r)
+            {
+                if (people[r] >= limit)
+                {
+                    r--;
+                    ans++;
+                }
+                else if (people[r] + people[l] > limit)
+                {
+					r--;
+					ans++;
+                }
+                else if (people[r] + people[l] <= limit)
+                {
+                    r--;
+                    l++;
+                    ans++;
+                }
+                else
+                {
+
+                }
+            }
+
+            return ans;
+		}
+	};
 }

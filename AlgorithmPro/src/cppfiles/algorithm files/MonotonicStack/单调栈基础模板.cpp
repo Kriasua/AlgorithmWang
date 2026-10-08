@@ -85,3 +85,83 @@ namespace
 		}
 	}
 }
+
+namespace review
+{
+	int n;
+	constexpr int N = 1000003;
+	std::vector<int> nums;
+	std::vector<int> stack;
+	std::vector<std::pair<int,int>> info;
+	int size;
+
+	void f()
+	{
+		for (int i = 0; i < n; i++)
+		{
+			if (size == 0 || nums[i] > nums[stack[size-1]])
+			{
+				stack[size++] = i;
+			}
+			else
+			{
+				while (size != 0 && nums[i] <= nums[stack[size - 1]])
+				{
+					int top = stack[--size];
+					info[top].first = size == 0 ? -1 : stack[size - 1];
+					info[top].second = i;
+				}
+
+				stack[size++] = i;
+			}
+		}
+
+		while (size != 0)
+		{
+			int top = stack[--size];
+			info[top].first = size == 0 ? -1 : stack[size - 1];
+			info[top].second = -1;
+		}
+
+		for (int i = n - 1; i >= 0; i--)
+		{
+			if (info[i].second != -1 && nums[i] == nums[info[i].second])
+			{
+				info[i].second = info[info[i].second].second;
+			}
+		}
+		
+	}
+
+	void print()
+	{
+		for (int i = 0; i < n; i++)
+		{
+			//int l = info[i].first == -1 ? -1 : nums[info[i].first];
+			//int r = info[i].second == -1 ? -1 : nums[info[i].second];
+			std::cout << info[i].first << " " << info[i].second << "\n";
+		}
+	}
+
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		std::cin.tie(nullptr);
+
+		nums.resize(N);
+		stack.resize(N);
+		info.resize(N);
+
+		while (std::cin >> n)
+		{
+			size = 0;
+			for (int i = 0; i < n; i++)
+			{
+				std::cin >> nums[i];
+			}
+			f();
+			print();
+		}
+	}
+
+}

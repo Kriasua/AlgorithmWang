@@ -3,7 +3,7 @@
 #include<unordered_map>
 #include<climits>
 #include<array>
-#include "pch.h"
+//https://www.nowcoder.com/practice/7c4559f138e74ceb9ba57d76fd169967
 
 
 namespace {
@@ -75,6 +75,88 @@ namespace {
 					setAll(x);
 				}
 
+			}
+		}
+	}
+}
+
+namespace review
+{
+	int N;
+	int opt;
+	std::unordered_map<int, std::pair<int,int>> map;
+	int setAll;
+	int lastSet;
+	int curTime;
+
+	void clean()
+	{
+		map.clear();
+		curTime = 0;
+		setAll = 0;
+		lastSet = -1;
+	}
+
+	void put(int x, int y)
+	{
+		map[x] = { y,curTime };
+		curTime++;
+	}
+
+	int find(int x)
+	{
+		const auto& tar = map.find(x);
+		if (tar == map.end())
+		{
+			return -1;
+		}
+		
+		std::pair<int, int> p = map[x];
+		if (p.second > lastSet)
+		{
+			return p.first;
+		}
+		else
+		{
+			return setAll;
+		}
+	}
+
+	void set(int x)
+	{
+		setAll = x;
+		lastSet = curTime++;
+	}
+
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		std::cin.tie(nullptr);
+
+		while (std::cin >> N)
+		{
+			clean();
+			for (int i = 0; i < N; i++)
+			{
+				std::cin >> opt;
+				if (opt == 1)
+				{
+					int x, y;
+					std::cin >> x >> y;
+					put(x, y);
+				}
+				else if (opt == 2)
+				{
+					int x;
+					std::cin >> x;
+					std::cout << find(x) << "\n";
+				}
+				else
+				{
+					int x;
+					std::cin >> x;
+					set(x);
+				}
 			}
 		}
 	}

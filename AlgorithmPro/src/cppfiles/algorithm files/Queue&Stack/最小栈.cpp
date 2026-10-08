@@ -54,4 +54,50 @@ namespace
 			return min[size - 1];
 		}
 	};
+
+
+
+
+
+
+	class MinStack2 {
+	public:
+
+		std::vector<int> stack;
+		std::vector<int> Min;
+		int size;
+		MinStack2() : size(0)
+		{
+			stack.resize(30004);
+			Min.resize(30004);
+		}
+
+		void push(int value) {
+			if (size == 0)
+			{
+				stack[size] = value;
+				Min[size++] = value;
+			}
+			else
+			{
+				stack[size] = value;
+				Min[size] = value >= getMin() ? getMin() : value;
+				size++;
+			}
+		}
+
+		void pop() {
+			size--;
+		}
+
+		int top() {
+			return stack[size - 1];
+		}
+
+		int getMin() {
+			return Min[size - 1];
+		}
+	};
+
+
 }

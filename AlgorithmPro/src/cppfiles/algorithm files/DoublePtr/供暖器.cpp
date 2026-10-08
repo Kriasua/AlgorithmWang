@@ -32,4 +32,29 @@ namespace
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		int findRadius(std::vector<int>& houses, std::vector<int>& heaters) {
+            std::sort(houses.begin(), houses.end());
+            std::sort(heaters.begin(), heaters.end());
+
+            int hou = 0;
+            int heat = 0;
+            int ans = 0;
+            for (; hou < houses.size(); hou++)
+            {
+                int curMin = std::abs(houses[hou] - heaters[heat]);
+                while (heat < heaters.size() - 1 &&
+                    std::abs(houses[hou] - heaters[heat + 1]) <= curMin)
+                {
+                    heat++;
+                    curMin = std::abs(houses[hou] - heaters[heat]);
+                }
+                ans = std::max(ans, curMin);
+            }
+
+            return ans;
+		}
+	};
 }

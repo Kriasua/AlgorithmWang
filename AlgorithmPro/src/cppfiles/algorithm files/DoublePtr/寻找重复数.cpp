@@ -28,4 +28,29 @@ namespace
 
         }
     };
+
+	class Solution2 {
+	public:
+		int findDuplicate(std::vector<int>& nums) {
+            int slow = nums[0];
+            int fast = nums[0];
+            bool isStart = false;
+            while (slow != fast || isStart == false)
+            {
+                isStart = true;
+                slow = nums[slow];
+                fast = nums[nums[fast]];
+            }
+
+            slow = nums[0];
+            while (slow != fast)
+            {
+                slow = nums[slow];
+                fast = nums[fast];
+            }
+
+            return slow;
+
+		}
+	};
 }

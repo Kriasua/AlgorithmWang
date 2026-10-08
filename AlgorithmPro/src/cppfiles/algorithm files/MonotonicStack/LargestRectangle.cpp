@@ -36,6 +36,47 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution2 {
+	public:
+		int largestRectangleArea(std::vector<int>& heights) {
+			int  n = heights.size();
+			std::vector<int> stack(n);
+			int size = 0;
+			int ans = 0;
+
+			for (int i = 0; i < n; i++)
+			{
+				if (size == 0)
+				{
+					stack[size++] = i;
+				}
+				else
+				{
+					while (size != 0 && heights[i] <= heights[stack[size - 1]])
+					{
+						int top = stack[--size];
+						int left = size == 0 ? -1 : stack[size - 1];
+						int right = i;
+						int length = right - left - 1;
+						ans = std::max(ans, length * heights[top]);
+					}
+					stack[size++] = i;
+				}
+			}
+
+			while (size != 0)
+			{
+				int top = stack[--size];
+				int left = size == 0 ? -1 : stack[size - 1];
+				int right = n;
+				int length = right - left - 1;
+				ans = std::max(ans, length * heights[top]);
+			}
+
+			return ans;
+		}
+	};
 }
 
 

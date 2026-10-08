@@ -42,4 +42,35 @@ namespace
 			return ans;
 		}
 	};
+
+
+	class Solution2 {
+	public:
+		int maxWidthRamp(std::vector<int>& nums) {
+			std::vector<int> stack(nums.size());
+			int size = 0;
+			stack[size++] = 0;
+			for (int i = 1; i < nums.size(); i++)
+			{
+				if (nums[i] < nums[stack[size - 1]])
+				{
+					stack[size++] = i;
+				}
+			}
+
+			int ans = 0;
+			int i = nums.size() - 1;
+			while (size != 0)
+			{
+				int top = stack[--size];
+				while (nums[i] < nums[top])
+				{
+					i--;
+				}
+				ans = std::max(ans, i - top);
+			}
+
+			return ans;
+		}
+	};
 }

@@ -35,6 +35,7 @@ namespace
 			return ans;
 		}
 
+
 		int maximalRectangle(std::vector<std::vector<char>>& matrix) {
 			int ans = 0;
 			int n = matrix.size();
@@ -52,6 +53,77 @@ namespace
 				}
 
 				ans = std::max(ans, largestRectangleArea(heights, stack));
+			}
+
+			return ans;
+		}
+	};
+
+	class Solution2 {
+	public:
+
+		int f(std::vector<int>& heights) {
+			int  n = heights.size();
+			std::vector<int> stack(n);
+			int size = 0;
+			int ans = 0;
+
+			for (int i = 0; i < n; i++)
+			{
+				if (size == 0)
+				{
+					stack[size++] = i;
+				}
+				else
+				{
+					while (size != 0 && heights[i] <= heights[stack[size - 1]])
+					{
+						int top = stack[--size];
+						int left = size == 0 ? -1 : stack[size - 1];
+						int right = i;
+						int length = right - left - 1;
+						ans = std::max(ans, length * heights[top]);
+					}
+					stack[size++] = i;
+				}
+			}
+
+			while (size != 0)
+			{
+				int top = stack[--size];
+				int left = size == 0 ? -1 : stack[size - 1];
+				int right = n;
+				int length = right - left - 1;
+				ans = std::max(ans, length * heights[top]);
+			}
+
+			return ans;
+		}
+
+		int maximalRectangle(std::vector<std::vector<char>>& mat) {
+			std::vector<int> help(mat[0].size());
+			for (int i = 0; i < help.size(); i++)
+			{
+				help[i] = mat[0][i] == '1' ? 1 : 0;
+			}
+
+			int ans = f(help);
+
+			for (int i = 1; i < mat.size(); i++)
+			{
+				for (int j = 0; j < help.size(); j++)
+				{
+					if (mat[i][j] == '0')
+					{
+						help[j] = 0;
+					}
+					else
+					{
+						help[j]++;
+					}
+				}
+
+				ans = std::max(ans, f(help));
 			}
 
 			return ans;

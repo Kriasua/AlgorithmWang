@@ -4,6 +4,7 @@
 // ≤‚ ‘¡¥Ω” : https://leetcode.cn/problems/first-missing-positive/
 
 #include<vector>
+#include<algorithm>
 namespace
 {
     class Solution {
@@ -45,4 +46,30 @@ namespace
             nums[b] = temp;
         }
     };
+
+	class Solution2 {
+	public:
+		int firstMissingPositive(std::vector<int>& nums) {
+            std::sort(nums.begin(), nums.end());
+            int one = 0;
+            while (one < nums.size() && nums[one] != 1)
+            {
+                one++;
+            }
+
+            if (one == nums.size())
+            {
+                return 1;
+            }
+
+            one++;
+
+            while (one < nums.size() && (nums[one] - nums[one - 1]  <= 1))
+            {
+                one++;
+            }
+
+            return nums[one - 1] + 1;
+		}
+	};
 }

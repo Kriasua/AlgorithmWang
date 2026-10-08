@@ -42,4 +42,34 @@ namespace {
             return findNumber(nums,3);
         }
     };
+
+	class Solution2 {
+	public:
+		int singleNumber(std::vector<int>& nums) {
+            std::vector<int> help(32);
+            for (int num : nums)
+            {
+                for (int i = 0; i < 32; i++)
+                {
+                    if (((1 << i) & num) != 0)
+                    {
+                        help[i]++;
+                    }
+                }
+            }
+
+            for (int& num : help)
+            {
+                num = num % 3;
+            }
+
+            int ans = 0;
+            for (int i = 0; i < 32; i++)
+            {
+                
+                ans = ans | (help[i] << i);
+            }
+            return ans;
+		}
+	};
 }

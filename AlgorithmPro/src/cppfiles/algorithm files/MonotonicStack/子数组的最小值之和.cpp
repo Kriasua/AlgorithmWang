@@ -41,4 +41,52 @@ namespace
 			return (int)ans;
 		}
 	};
+
+	class Solution2 {
+	public:
+		int sumSubarrayMins(std::vector<int>& arr) {
+			int n = arr.size();
+			std::vector<int> stack(n);
+			int ans = 0;
+			int mod = 1e9 + 7;
+			int size = 0;
+
+			for (int i = 0; i < n; i++)
+			{
+				if (size == 0)
+				{
+					stack[size++] = i;
+				}
+				else
+				{
+					while (size != 0 && arr[i] <= arr[stack[size - 1]])
+					{
+						int top = stack[--size];
+						int left = size == 0 ? -1 : stack[size - 1];
+						int start = top - left;
+						int end = i - top;
+						long long int p = start * end;
+						p %= mod;
+						ans = ans + (p * arr[top]) % mod;
+						ans %= mod;
+					}
+					stack[size++] = i;
+				}
+			}
+
+			while (size != 0)
+			{
+				int top = stack[--size];
+				int left = size == 0 ? -1 : stack[size - 1];
+				int start = top - left;
+				int end = n - top;
+				long long int p = start * end;
+				p %= mod;
+				ans = ans + (p * arr[top]) % mod;
+				ans %= mod;
+			}
+
+			return ans;
+		}
+	};
 }

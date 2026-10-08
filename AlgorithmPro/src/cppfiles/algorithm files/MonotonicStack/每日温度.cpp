@@ -31,4 +31,48 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution2 {
+	public:
+		std::vector<int> dailyTemperatures(std::vector<int>& temperatures) {
+
+			std::vector<int> ans(temperatures.size());
+			std::vector<int> stack(temperatures.size());
+			int size = 0;
+
+			for (int i = 0; i < temperatures.size(); i++)
+			{
+				if (size == 0)
+				{
+					stack[size++] = i;
+				}
+				else
+				{
+					while (size != 0 && temperatures[i] > temperatures[stack[size - 1]])
+					{
+						int top = stack[size - 1];
+						size--;
+						ans[top] = i;
+					}
+
+					stack[size++] = i;
+				}
+			}
+
+			while (size != 0)
+			{
+				int top = stack[size - 1];
+				ans[top] = top;
+				size--;
+			}
+
+			for (int i = 0; i < temperatures.size(); i++)
+			{
+				ans[i] -= i;
+			}
+
+			return ans;
+
+		}
+	};
 }

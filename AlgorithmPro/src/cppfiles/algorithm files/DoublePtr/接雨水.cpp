@@ -58,4 +58,40 @@ namespace
         }
 
     };
+
+	class Solution2 {
+	public:
+		int trap(std::vector<int>& height) {
+            int n = height.size();
+
+            if (n <= 2)
+            {
+                return 0;
+            }
+
+            int lmax = height[0];
+            int rmax = height.back();
+            int l = 1;
+            int r = n - 1;
+            int ans = 0;
+
+            while (l <= r)
+            {
+                if (lmax <= rmax)
+                {
+                    ans += std::max(0, lmax - height[l]);
+                    lmax = std::max(lmax, height[l]);
+                    l++;
+                }
+                else
+                {
+                    ans += std::max(0, rmax - height[r]);
+                    rmax = std::max(rmax, height[r]);
+                    r--;
+                }
+            }
+
+            return ans;
+		}
+	};
 }
