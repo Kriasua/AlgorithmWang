@@ -1,5 +1,8 @@
+//https://leetcode.cn/problems/check-completeness-of-a-binary-tree/description/
+
 #include<array>
 #include "pch.h"
+#include<queue>
 namespace{
 
     struct TreeNode {
@@ -62,4 +65,47 @@ namespace{
             return ans;
         }
     };
+
+	class Solution2 {
+	public:
+		bool isCompleteTree(TreeNode* root) {
+            std::queue<TreeNode*> queue;
+            queue.push(root);
+            bool bit = false;
+            while (!queue.empty())
+            {
+                TreeNode* n = queue.front();
+                queue.pop();
+                if (n->left != nullptr)
+                {
+                    queue.push(n->left);
+                }
+                if (n->right != nullptr)
+                {
+                    queue.push(n->right);
+                }
+
+                if (n->right != nullptr && n->left == nullptr)
+                {
+                    return false;
+                }
+
+
+                if (!(n->left == nullptr && n->right == nullptr) && bit)
+                {
+                    return false;
+                }
+
+				if ((n->left != nullptr && n->right == nullptr)
+					||
+					(n->left == nullptr && n->right == nullptr))
+				{
+					bit = true;
+				}
+
+
+            }
+            return true;
+		}
+	};
 }

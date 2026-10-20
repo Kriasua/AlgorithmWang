@@ -49,4 +49,34 @@ namespace
             return f(preorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1,map);
         }
     };
+
+	class Solution {
+	public:
+        TreeNode* f(std::vector<int>& preorder, std::vector<int>& inorder, int a, int b, int c, int d)
+        {
+            if (a > b)
+            {
+                return nullptr;
+            }
+
+            int target = preorder[a];
+            int find;
+            for (int i = c; i <= d; i++)
+            {
+                if (inorder[i] == target)
+                {
+                    find = i;
+                }
+            }
+
+            TreeNode* n = new TreeNode(target);
+            n->left = f(preorder, inorder, a + 1, a + find - c, c, find - 1);
+            n->right = f(preorder, inorder, a + find - c + 1, b, find + 1, d);
+            return n;
+        }
+
+		TreeNode* buildTree(std::vector<int>& preorder, std::vector<int>& inorder) {
+            return f(preorder, inorder, 0, preorder.size() - 1, 0, inorder.size() - 1);
+		}
+	};
 }
