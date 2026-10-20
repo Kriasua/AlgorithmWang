@@ -1,70 +1,154 @@
 #include<iostream>
 #include<vector>
-#include"Heap.h"
-#include "pch.h"
+#include<queue>
 
-	void Myheap::Swap(std::vector<int>& arr, int a, int b)
+class heap
+{
+private:
+	int m_size = 0;
+	std::vector<int> m_heap;
+
+	
+
+	void swap(std::vector<int>& nums, int a, int b)
 	{
-		int temp = arr[a];
-		arr[a] = arr[b];
-		arr[b] = temp;
+		int tmp = nums[a];
+		nums[a] = nums[b];
+		nums[b] = tmp;
 	}
 
-	void Myheap::heapInsert(std::vector<int>& arr, int i)
+	void heapInsert(int num)
 	{
-		while (arr[(i - 1) / 2] < arr[i])
+		if (m_heap.size() == m_size)
 		{
-			Swap(arr, i, (i - 1) / 2);
-			i = (i - 1) / 2;
+			m_heap.resize(2 * m_heap.size() + 1);
+		}
+
+		m_heap[m_size++] = num;
+
+		int curIdx = m_size - 1;
+		int fatherIdx = (curIdx - 1) / 2;
+		while (curIdx != 0 && m_heap[curIdx] > m_heap[fatherIdx])
+		{
+			swap(m_heap, fatherIdx, curIdx);
+			curIdx = fatherIdx;
+			fatherIdx = (curIdx - 1) / 2;
 		}
 	}
 
-	void Myheap::heapify(std::vector<int>& arr, int i, int size)
+	void heapify(int i)
 	{
-		int l = 2 * i + 1;
+		int cur = i;
+		int leftChild = 2 * i + 1;
+		int rightChild = 2 * i + 2;
+		int bigger = leftChild;
 
-		while (l < size)
+		while (m_size > leftChild)
 		{
-			int bigger = l + 1 < size && arr[l + 1] > arr[l] ? l + 1 : l;
-
-			if (arr[i] < arr[bigger])
+			if (m_size > rightChild && m_heap[rightChild] > m_heap[leftChild])
 			{
-				Swap(arr, i, bigger);
-				i = bigger;
-				l = 2 * i + 1;
+				bigger = rightChild;
 			}
 			else
 			{
+				bigger = leftChild;
+			}
+
+			bigger = m_heap[cur] > m_heap[bigger] ? cur : bigger;
+			if (cur == bigger)
+			{
 				break;
 			}
+
+			swap(m_heap, cur, bigger);
+			cur = bigger;
+			leftChild = 2 * cur + 1;
+			rightChild = 2 * cur + 2;
 		}
+
+
 	}
 
-	std::vector<int> Myheap::MakeHeap(std::vector<int>& arr)
+public:
+	heap()
 	{
-		for (int i = (arr.size()-2)/2 ; i>=0 ; i--)
+
+	}
+
+	heap(std::vector<int>& arr)
+	{
+		m_size = arr.size();
+		m_heap.resize(arr.size());
+		for (int num : arr)
 		{
-			heapify(arr, i, arr.size());
+			heapInsert(num);
 		}
 
-		return arr;
 	}
 
-
-	Myheap::Myheap( std::vector<int> arr)
+	~heap()
 	{
-		Heap=MakeHeap(arr);
+		m_heap.clear();
 	}
 
-	void Myheap::HeapSort()
+	int getSize()
 	{
-		int size = Heap.size();
-		for (int i =size-1; i >= 0; i--)
+		return m_size;
+	}
+
+	bool empty()
+	{
+		return m_size == 0;
+	}
+
+	void insert(int num)
+	{
+		heapInsert(num);
+	}
+
+	int top()
+	{
+		return m_heap[0];
+	}
+
+	void pop()
+	{
+		swap(m_heap, 0, m_size - 1);
+		m_size--;
+		heapify(0);
+	}
+
+};
+
+//将数组和减半的最少操作
+class Solution {
+public:
+	int halveArray(std::vector<int>& nums) {
+		std::priority_queue<float,std::vector<float>,std::less<float>> heap(nums.begin(), nums.end());
+		double sum = 0;
+		for (int num : nums)
 		{
-			Swap(Heap, 0, i);
-			size--;
-			heapify(Heap, 0, size);
+			sum += num;
 		}
-		
+
+		double half = sum / 2;
+		int ans = 0;
+		sum = 0;
+
+		while (sum < half)
+		{
+			float tmp = heap.top();
+			heap.pop();
+			sum += tmp / 2;
+			heap.push(tmp / 2);
+			ans++;
+		}
+
+		return ans;
 	}
+};
+
+
+
+
 

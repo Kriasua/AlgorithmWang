@@ -148,123 +148,242 @@ namespace {
     };
 
     //第二次写
-    struct Node
-    {
-        int key;
-        int value;
-        Node* last = nullptr;
-        Node* next = nullptr;
+ //   struct Node
+ //   {
+ //       int key;
+ //       int value;
+ //       Node* last = nullptr;
+ //       Node* next = nullptr;
 
-        Node(int k, int v) : key(k), value(v)
+ //       Node(int k, int v) : key(k), value(v)
+ //       {
+
+ //       }
+ //   };
+
+ //   class Doublelist
+ //   {
+ //   public:
+ //       Node* head = nullptr;
+ //       Node* tail = nullptr;
+
+ //       Doublelist() 
+ //       {
+ //           head = new Node(-1, -1);
+ //           tail = new Node(-1, -1);
+ //           head->next = tail;
+ //           tail->last = head;
+ //           
+ //       }
+ //       ~Doublelist(){}
+
+ //       void moveToTail(Node* node)
+ //       {
+ //           if (node->next == tail)
+ //           {
+ //               return;
+ //           }
+
+ //           Node* oriLast = node->last;
+ //           Node* oriNext = node->next;
+ //           node->last = nullptr;
+ //           node->next = nullptr;
+ //           oriLast->next = oriNext;
+ //           oriNext->last = oriLast;
+
+ //           add(node);
+ //       }
+
+ //       void removeHead()
+ //       {
+ //           Node* node = head->next;
+ //           Node* next = node->next;
+	//		node->last = nullptr;
+	//		node->next = nullptr;
+ //           head->next = next;
+ //           next->last = head;
+ //           delete(node);
+ //       }
+
+ //       void add(Node* node)
+ //       {
+ //           Node* Taillast = tail->last;
+ //           Taillast->next = node;
+ //           node->next = tail;
+ //           tail->last = node;
+ //           node->last = Taillast;
+ //       }
+
+ //   };
+
+
+	//class LRUCache2 {
+	//public:
+	//	LRUCache2(int capacity) : m_capacity(capacity)
+ //       {
+
+	//	}
+
+	//	int get(int key) {
+ //           if (m_map.contains(key))
+ //           {
+ //               int ans = m_map[key]->value;
+ //               m_list.moveToTail(m_map[key]);
+ //               return ans;
+ //           }
+ //           else
+ //           {
+ //               return -1;
+ //           }
+	//	}
+
+	//	void put(int key, int value) {
+ //           if (m_map.contains(key))
+ //           {
+ //               m_map[key]->value = value;
+ //               m_list.moveToTail(m_map[key]);
+ //           }
+ //           else
+ //           {
+ //               Node* node = new Node(key, value);
+	//			m_list.add(node);
+	//			m_map[key] = node;
+ //               if (m_size < m_capacity)
+ //               {
+ //                   m_size++;
+ //               }
+ //               else
+ //               {
+ //                   m_map.erase(m_list.head->next->key);
+ //                   m_list.removeHead();  
+ //               }
+ //           }
+	//	}
+
+ //   private:
+ //       const int m_capacity;
+ //       int m_size = 0;
+ //       Doublelist m_list;
+ //       std::unordered_map<int, Node*> m_map;
+	//};
+
+
+
+
+
+    //第三次写
+	class LRUCache3 {
+    private:
+        struct node
         {
+            int key;
+            int value;
+            node* next;
+            node* last;
 
-        }
-    };
-
-    class Doublelist
-    {
-    public:
-        Node* head = nullptr;
-        Node* tail = nullptr;
-
-        Doublelist() 
-        {
-            head = new Node(-1, -1);
-            tail = new Node(-1, -1);
-            head->next = tail;
-            tail->last = head;
-            
-        }
-        ~Doublelist(){}
-
-        void moveToTail(Node* node)
-        {
-            if (node->next == tail)
+            node(int k, int v) : key(k) , value(v), next(nullptr), last(nullptr)
             {
-                return;
+
+            }
+        };
+
+        class doubleList
+        {
+        public:     
+            node* head;
+            node* tail;
+
+            doubleList()
+            {
+                head = new node(0, 0);
+                tail = new node(0, 0);
+                head->next = tail;
+                tail->last = head;
             }
 
-            Node* oriLast = node->last;
-            Node* oriNext = node->next;
-            node->last = nullptr;
-            node->next = nullptr;
-            oriLast->next = oriNext;
-            oriNext->last = oriLast;
+            void insert(node* newNode)
+            {              
+                node* next = head->next;
+                head->next = newNode;
+                next->last = newNode;
+                newNode->next = next;
+                newNode->last = head;
+            }
 
-            add(node);
-        }
+            void moveToHead(node* n)
+            {
+                node* next = n->next;
+                node* last = n->last;
+                n->next = nullptr;
+                n->last = nullptr;
+                next->last = last;
+                last->next = next;
+                insert(n);
+            }
 
-        void removeHead()
-        {
-            Node* node = head->next;
-            Node* next = node->next;
-			node->last = nullptr;
-			node->next = nullptr;
-            head->next = next;
-            next->last = head;
-            delete(node);
-        }
+            void erase(node* n)
+            {
+				node* next = n->next;
+				node* last = n->last;
+				n->next = nullptr;
+				n->last = nullptr;
+				next->last = last;
+				last->next = next;
+                delete(n);
+            }
+        };
 
-        void add(Node* node)
-        {
-            Node* Taillast = tail->last;
-            Taillast->next = node;
-            node->next = tail;
-            tail->last = node;
-            node->last = Taillast;
-        }
-
-    };
-
-
-	class LRUCache2 {
 	public:
-		LRUCache2(int capacity) : m_capacity(capacity)
-        {
+        int size = 0;
+        int cap;
+        doubleList list;
+        std::unordered_map<int, node*> map;
 
+		LRUCache3(int capacity) :cap(capacity)
+        {
+            list = doubleList();
 		}
 
 		int get(int key) {
-            if (m_map.contains(key))
+            if (!map.contains(key))
             {
-                int ans = m_map[key]->value;
-                m_list.moveToTail(m_map[key]);
-                return ans;
+                return -1;
             }
             else
             {
-                return -1;
+                node* target = map[key];
+                list.moveToHead(target);
+                return target->value;
             }
 		}
 
 		void put(int key, int value) {
-            if (m_map.contains(key))
-            {
-                m_map[key]->value = value;
-                m_list.moveToTail(m_map[key]);
-            }
+			if (map.contains(key))
+			{
+				node* target = map[key];
+				list.moveToHead(target);
+                target->value = value;
+			}
             else
             {
-                Node* node = new Node(key, value);
-				m_list.add(node);
-				m_map[key] = node;
-                if (m_size < m_capacity)
+                if (size < cap)
                 {
-                    m_size++;
+                    node* n = new node(key, value);
+                    map.emplace(key, n);
+                    list.insert(n);
+                    size++;
                 }
                 else
                 {
-                    m_map.erase(m_list.head->next->key);
-                    m_list.removeHead();  
+                    node* last = list.tail->last;
+                    map.erase(last->key);
+                    list.erase(last);
+					node* n = new node(key, value);
+					map.emplace(key, n);
+					list.insert(n);
                 }
             }
 		}
-
-    private:
-        const int m_capacity;
-        int m_size = 0;
-        Doublelist m_list;
-        std::unordered_map<int, Node*> m_map;
 	};
 }
 

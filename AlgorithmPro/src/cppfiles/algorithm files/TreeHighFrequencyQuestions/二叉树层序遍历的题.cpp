@@ -1,5 +1,6 @@
 #include<array>
 #include<vector>
+#include<queue>
 #include "pch.h"
 namespace
 {
@@ -54,6 +55,52 @@ namespace
 
         }
     };
+
+	class Solution {
+	public:
+		std::vector<std::vector<int>> levelOrder(TreeNode* root) {
+            if (root == nullptr)
+            {
+                return std::vector<std::vector<int>>{ {root->val} };
+            }
+
+            std::vector<std::vector<int>> ans;
+            std::queue<TreeNode*> q;
+            q.push(root);
+            int loopCnt = 1;
+            int nodeCnt = 1;
+
+            while (!q.empty())
+            {
+                std::vector<int> cur;
+                loopCnt = nodeCnt;
+                nodeCnt = 0;
+                for (int i = 0; i < loopCnt; i++)
+                {
+                    TreeNode* n = q.front();
+                    q.pop();
+                    if (n->left != nullptr)
+                    {
+                        q.push(n->left);
+                        nodeCnt++;
+                    }
+					if (n->right != nullptr)
+					{
+						q.push(n->right);
+						nodeCnt++;
+					}
+                    cur.push_back(n->val);
+
+                }
+
+                ans.push_back(cur);
+
+            }
+
+            return ans;
+
+		}
+	};
 
     ////////////////////////Ç¿»¯°æ£º¾â³Ý×´±éÀú//////////////////////////////
 

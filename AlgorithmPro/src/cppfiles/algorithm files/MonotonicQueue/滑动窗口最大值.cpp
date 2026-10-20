@@ -85,5 +85,47 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution2 {
+	public:
+		std::vector<int> maxSlidingWindow(std::vector<int>& nums, int k) {
+			std::vector<int> ans;
+			std::vector<int> queue(nums.size());
+			int l = 0;
+			int r = 0;
+
+			for (int i = 0; i < k; i++)
+			{
+				while (l < r && nums[i] >= nums[queue[r - 1]])
+				{
+					r--;
+				}
+
+				queue[r++] = i;
+			}
+			ans.push_back(nums[queue[l]]);
+			if (queue[l] == 0)
+			{
+				l++;
+			}
+
+			for (int i = k; i < nums.size(); i++)
+			{
+				while (l < r && nums[i] >= nums[queue[r - 1]])
+				{
+					r--;
+				}
+
+				queue[r++] = i;
+				ans.push_back(nums[queue[l]]);
+				if (queue[l] == i-k+1)
+				{
+					l++;
+				}
+			}
+
+			return ans;
+		}
+	};
 }
 

@@ -364,6 +364,8 @@
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\判断链表是否为回文.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\反转链表.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\listquestions\合并k个有序链表.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\合并两个有序链表.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\排序链表.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\listquestions\求链表入环节点.cpp">

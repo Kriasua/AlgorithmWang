@@ -60,4 +60,50 @@ namespace
 
 		}
 	};
+
+	class Solution2 {
+	public:
+		int longestSubarray(std::vector<int>& nums, int limit) {
+			std::vector<int> minQ(nums.size()+1);
+			std::vector<int> maxQ(nums.size()+1);
+			int minL = 0;
+			int minR = 0;
+			int maxL = 0;
+			int maxR = 0;
+
+			int l = 0;
+			int r = 0;
+			int ans = 0;
+			for (; r < nums.size(); r++)
+			{
+				while (maxL < maxR && nums[r] >= nums[maxQ[maxR - 1]])
+				{
+					maxR--;
+				}
+				while (minL < minR && nums[r] <= nums[minQ[minR - 1]])
+				{
+					minR--;
+				}
+
+				maxQ[maxR++] = r;
+				minQ[minR++] = r;
+
+				while (l < r && std::abs(nums[maxQ[maxL]] - nums[minQ[minL]]) > limit)
+				{
+					if (maxQ[maxL] == l)
+					{
+						maxL++;
+					}
+					if (minQ[minL] == l)
+					{
+						minL++;
+					}
+					l++;
+				}
+
+				ans = std::max(ans, r - l + 1);
+			}
+			return ans;
+		}
+	};
 }

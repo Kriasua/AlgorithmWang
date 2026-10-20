@@ -1,3 +1,4 @@
+
 namespace
 {
     struct ListNode {
@@ -59,6 +60,43 @@ namespace
             return head;
         }
     };
+
+	class Solution2 {
+	public:
+		ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+            ListNode* dummyHead = new ListNode(-1);
+            ListNode* cur = dummyHead;
+            ListNode* l1 = list1;
+            ListNode* l2 = list2;
+
+            while (l1!=nullptr && l2!=nullptr)
+            {
+                if (l1->val <= l2->val)
+                {
+                    cur->next = l1;
+                    l1 = l1->next;
+                }
+                else
+                {
+                    cur->next = l2;
+                    l2 = l2->next;
+                }
+
+                cur = cur->next;
+            }
+
+            if (l1 != nullptr)
+            {
+                cur->next = l1;
+            }
+            else
+            {
+                cur->next = l2;
+            }
+
+            return dummyHead->next;
+		}
+	};
 }
 
 

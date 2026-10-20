@@ -1,3 +1,5 @@
+//https://leetcode.cn/problems/linked-list-cycle-ii/
+
 namespace
 {
     struct ListNode {
@@ -40,4 +42,40 @@ namespace
 
         }
     };
+
+	class Solution1 {
+	public:
+		ListNode* detectCycle(ListNode* head) {
+            ListNode* fast = head;
+            ListNode* slow = head;
+            bool isCycle = false;
+
+            while (fast != nullptr && fast->next != nullptr)
+            {
+                fast = fast->next->next;
+                slow = slow->next;
+
+				if (fast == slow)
+				{
+					isCycle = true;
+					break;
+				}
+            }
+
+            if (!isCycle)
+            {
+                return nullptr;
+            }
+            else
+            {
+                slow = head;
+                while (slow != fast)
+                {
+                    slow = slow->next;
+                    fast = fast->next;
+                }
+                return fast;
+            }
+		}
+	};
 }

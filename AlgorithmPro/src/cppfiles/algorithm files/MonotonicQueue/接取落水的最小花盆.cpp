@@ -114,5 +114,108 @@ namespace
 	}
 }
 
+namespace review
+{
+	int N, D;
+	constexpr int MAXN = 100005;
+	constexpr int MAXD = 1000005;
+	constexpr int MAXX = 1000005;
+	std::vector<std::pair<int,int>> space(MAXX);
+	std::vector<int> minQ(MAXD);
+	std::vector<int> maxQ(MAXD);
+	int minL = 0;
+	int minR = 0;
+	int maxL = 0;
+	int maxR = 0;
+	int XvalueMax;
+
+	int l = 0;
+	int r = 0;
+
+	void clear()
+	{
+		for (int i = 0; i < MAXD; i++)
+		{
+			space[i] = { INT_MAX,INT_MIN };
+		}
+		minL = 0;
+		minR = 0;
+		maxL = 0;
+		maxR = 0;
+		l = 0;
+		r = 0;
+		XvalueMax = 0;
+	}
+
+	int f()
+	{
+		int ans = INT_MAX;
+		for (; r <= XvalueMax; r++)
+		{
+			if (space[r].first == INT_MAX)
+			{
+				continue;
+			}
+
+			while (maxL < maxR && space[r].second >= space[maxQ[maxR - 1]].second)
+			{
+				maxR--;
+			}
+
+			while (minL < minR && space[r].first <= space[minQ[minR - 1]].first)
+			{
+				minR--;
+			}
+
+			maxQ[maxR++] = r;
+			minQ[minR++] = r;
+
+			while (l <= r && (space[maxQ[maxL]].second - space[minQ[minL]].first >= D))
+			{
+				ans = std::min(ans, r - l);
+				if (maxQ[maxL] == l)
+				{
+					maxL++;
+				}
+				if (minQ[minL] == l)
+				{
+					minL++;
+				}
+				l++;
+			}
+		}
+
+		if (ans == INT_MAX)
+		{
+			ans = -1;
+		}
+		return ans;
+	}
+
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		std::cin.tie(nullptr);
+
+		while (std::cin >> N >> D)
+		{
+			clear();
+			for (int i = 0; i < N; i++)
+			{
+				int x, y;
+				std::cin >> x >> y;
+				space[x].first = std::min(space[x].first, y);
+				space[x].second = std::max(space[x].second, y);
+				XvalueMax = std::max(XvalueMax, x);
+			}
+
+			std::cout << f() << "\n";
+		}
+
+		return 0;
+	}
+
+}
+
 
 

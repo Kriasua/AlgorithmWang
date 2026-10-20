@@ -162,6 +162,8 @@ namespace review
 			f();
 			print();
 		}
+
+		return 0;
 	}
 
 }

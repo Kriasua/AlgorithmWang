@@ -2,7 +2,8 @@
 #include<vector>
 #include<algorithm>
 #include<array>
-#include "pch.h"
+#include<queue>
+// ≤‚ ‘¡¥Ω” : https://leetcode.cn/problems/meeting-rooms-ii/
 namespace {
 
     constexpr int maxN = 10000;
@@ -98,6 +99,35 @@ namespace {
 
         }
     }
+
+
+	class Solution {
+	public:
+		int minMeetingRooms(std::vector<std::vector<int>>& intervals) {
+            std::sort(intervals.begin(), intervals.end(), [](auto& a, auto& b)
+                {
+                    return a[0] < b[0];
+                });
+
+            int ans = 0;
+            std::priority_queue<int, std::vector<int>, std::greater<int>> heap;
+
+            for (int i = 0;i<intervals.size();i++)
+            {
+                int left = intervals[i][0];
+                int right = intervals[i][1];
+                ans = std::max(ans, (int)heap.size());
+                while (!heap.empty() && left >= heap.top())
+                {
+                    heap.pop();
+                }
+                heap.push(right);
+                ans = std::max(ans, (int)heap.size());
+            }
+
+            return ans;
+		}
+	};
 
     
 }

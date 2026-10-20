@@ -7,6 +7,9 @@
 #include<array>
 #include<string>
 #include<vector>
+#include<unordered_map>
+#include<algorithm>
+#include<unordered_set>
 namespace
 {
 	class Solution {
@@ -52,6 +55,60 @@ namespace
 
 			return ans;
 
+		}
+	};
+
+	class Solution2 {
+	public:
+		std::string removeDuplicateLetters(std::string s) {
+			std::vector<int> stack(10005);
+			int size = 0;
+			std::string ans;
+			std::unordered_map<char, int> map;
+			std::unordered_set<char> set;
+			for (char c : s)
+			{
+				if (map.contains(c))
+				{
+					map[c]++;
+				}
+				else
+				{
+					map.emplace(c, 1);
+				}
+			}
+
+
+			for (int i = 0; i < s.size(); i++)
+			{
+				char c = s[i];
+				if (set.contains(c))
+				{
+					map[c]--;
+					continue;
+				}
+
+				while (size > 0 && c < s[stack[size - 1]])
+				{
+					char tmp = s[stack[size - 1]];
+					if (map[tmp] == 1)
+					{
+						break;
+					}
+					map[tmp]--;
+					size--;
+					set.erase(tmp);
+				}
+
+				stack[size++] = i;
+				set.emplace(s[i]);
+			}
+
+			for (int i = 0; i < size; i++)
+			{
+				ans += s[stack[i]];
+			}
+			return ans;
 		}
 	};
 

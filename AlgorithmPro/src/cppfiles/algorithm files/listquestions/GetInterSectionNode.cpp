@@ -1,4 +1,4 @@
-
+//https://leetcode.cn/problems/intersection-of-two-linked-lists/submissions/755160065/
 
 
 namespace {
@@ -79,9 +79,56 @@ namespace {
                 return A;
             }
 
-
-
         }
     };
+
+	class Solution1 {
+	public:
+		ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+            ListNode* l1 = headA;
+            ListNode* l2 = headB;
+            int countA = 0;
+            int countB = 0;
+
+            while (l1 != nullptr)
+            {
+                l1 = l1->next;
+                countA++;
+            }
+
+			while (l2 != nullptr)
+			{
+				l2 = l2->next;
+				countB++;
+			}
+
+            l1 = headA;
+            l2 = headB;
+
+            if (countA > countB)
+            {
+                for (int i = 0; i < countA - countB; i++)
+                {
+                    l1 = l1->next;
+                }
+            }
+            else
+            {
+				for (int i = 0; i < countB - countA; i++)
+				{
+					l2 = l2->next;
+				}
+            }
+
+            while (l1 != l2)
+            {
+                l1 = l1->next;
+                l2 = l2->next;
+            }
+
+            return l1;
+
+		}
+	};
 
 }

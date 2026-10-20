@@ -1,3 +1,5 @@
+//https://leetcode.cn/problems/palindrome-linked-list/
+
 namespace {
 
     //翻转链表时假如奇数个 A>B>C>D>E
@@ -75,4 +77,82 @@ namespace {
 
         }
     };
+
+	class Solution1 {
+	public:
+
+		ListNode* reverseList(ListNode* head) {
+			ListNode* pre = nullptr;
+			ListNode* cur = head;
+
+			if (cur == nullptr || cur->next == nullptr)
+			{
+				return cur;
+			}
+
+			ListNode* next = cur->next;
+
+			while (next != nullptr)
+			{
+				cur->next = pre;
+				pre = cur;
+				cur = next;
+				next = next->next;
+			}
+
+			cur->next = pre;
+			return cur;
+		}
+
+		bool isPalindrome(ListNode* head) {
+            int cnt = 0;
+            ListNode* cur = head;
+            while (cur != nullptr)
+            {
+                cur = cur->next;
+                cnt++;
+            }
+
+            if (cnt == 1)
+            {
+                return true;
+            }
+
+            ListNode* fast = head;
+            ListNode* slow = head;
+            ListNode* prev = nullptr;
+
+            while (fast != nullptr && fast->next != nullptr)
+            {
+                prev = slow;
+                slow = slow->next;
+                fast = fast->next->next;
+            }
+
+            if (cnt % 2 != 0)
+            {
+                ListNode* next = slow->next;
+                slow->next = nullptr;
+                slow = next;
+            }
+
+            prev->next = nullptr;
+            ListNode* right = reverseList(slow);
+            ListNode* left = head;
+
+            while (left!=nullptr && right!=nullptr)
+            {
+                if (left->val != right->val)
+                {
+                    return false;
+                }
+
+                left = left->next;
+                right = right->next;
+            }
+
+            return true;
+
+		}
+	};
 }

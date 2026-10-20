@@ -93,3 +93,47 @@ namespace
 		}
 	}
 }
+
+namespace review
+{
+	int N;
+	constexpr int MAXN = 100005;
+	std::vector<std::pair<int, int>> stack(MAXN);
+	std::vector<int> nums(MAXN);
+	int size;
+
+
+
+	int main()
+	{
+		std::ios::sync_with_stdio(false);
+		std::cin.tie(nullptr);
+
+		while (std::cin >> N)
+		{
+			size = 0;
+			int ans = 0;
+			for (int i = 0; i < N; i++)
+			{
+				std::cin >> nums[i];
+			}
+
+			for (int i = N - 1; i >= 0; i--)
+			{
+				std::pair<int, int> tmp = { nums[i],0 };
+				while (size != 0 && tmp.first > stack[size - 1].first)
+				{
+					tmp.second = std::max(tmp.second + 1, stack[size - 1].second);
+					size--;
+				}
+
+				stack[size++] = tmp;
+				ans = std::max(ans, tmp.second);
+			}
+
+			std::cout << ans << "\n";
+		}
+
+		return 0;
+	}
+}

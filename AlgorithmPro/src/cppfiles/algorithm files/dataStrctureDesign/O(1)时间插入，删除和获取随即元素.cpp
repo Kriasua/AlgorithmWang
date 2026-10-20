@@ -71,6 +71,71 @@ namespace {
     };
 
 
+	class RandomizedSet2 {
+	public:
+		std::unordered_map<int, int> map;
+		std::vector<int> nums;
+
+		int randomInRange(int a, int b) {
+			// 使用随机设备初始化随机数引擎
+			std::random_device rd;  // 获取随机种子
+			std::mt19937 gen(rd()); // 使用 Mersenne Twister 引擎
+			std::uniform_int_distribution<> dis(a, b); // 定义均匀分布
+
+			return dis(gen); // 返回随机数
+		}
+
+		RandomizedSet2() {
+            
+		}
+
+		bool insert(int val) {
+            if (map.contains(val))
+            {
+                return false;
+            }
+            else
+            {
+                nums.push_back(val);
+                map[val] = nums.size() - 1;
+                return true;
+            }
+		}
+
+		bool remove(int val) {
+            if (!map.contains(val))
+            {
+                return false;
+            }
+            else
+            {
+                int index = map[val];
+                if (index == nums.size() - 1)
+                {
+                    nums.pop_back();
+                    map.erase(val);
+                }
+                else
+                {
+					int tmp = nums.back();
+					nums.pop_back();
+                    map.erase(val);
+                    map.erase(tmp);
+                    map.emplace(tmp, index);
+                    nums[index] = tmp;
+                }
+                
+                return true;
+            }
+		}
+
+		int getRandom() {
+            int index = randomInRange(0, nums.size() - 1);
+            return nums[index];
+		}
+	};
+
+
 
     ///////////////////////////////////////////////////////////////
     //加强版：允许有重复数字怎么办？

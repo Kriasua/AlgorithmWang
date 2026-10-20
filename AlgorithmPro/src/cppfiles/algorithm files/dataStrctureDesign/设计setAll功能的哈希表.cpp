@@ -80,7 +80,7 @@ namespace {
 	}
 }
 
-namespace review
+namespace review1
 {
 	int N;
 	int opt;
@@ -159,5 +159,7 @@ namespace review
 				}
 			}
 		}
+
+		return 0;
 	}
 }

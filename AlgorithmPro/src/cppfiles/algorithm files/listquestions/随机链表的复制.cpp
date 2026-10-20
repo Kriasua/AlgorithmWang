@@ -6,7 +6,8 @@
 新节点的 next 指针和 random 指针也都应指向复制链表中的新节点，
 并使原链表和复制链表中的这些指针能够表示相同的链表状态。
 复制链表中的指针都不应指向原链表中的节点 。*/
-
+#include<string>
+#include<iostream>
 namespace {
 
     class Node {
@@ -71,4 +72,54 @@ namespace {
 
         }
     };
+
+	class Solution1 {
+	public:
+		Node* copyRandomList(Node* head) {
+			if (head == nullptr)
+			{
+				return nullptr;
+			}
+
+			Node* cur = head;
+			while (cur != nullptr)
+			{
+				Node* newNode = new Node(cur->val);
+				newNode->next = cur->next;
+				cur->next = newNode;
+				cur = newNode->next;
+			}
+
+			Node* pre = head;
+			cur = head->next;
+
+			while (cur->next != nullptr)
+			{
+				cur->random = pre->random == nullptr ? nullptr : pre->random->next;
+				cur = cur->next->next;
+				pre = pre->next->next;
+			}
+
+			cur->random = pre->random == nullptr ? nullptr : pre->random->next;
+			Node* ori = head;
+			Node* cop = head->next;
+			Node* copHead = cop;
+			while (cop->next != nullptr)
+			{
+				ori->next = cop->next;
+				cop->next = cop->next->next;
+                ori = ori->next;
+                cop = cop->next;
+			}
+
+			ori->next = nullptr;
+			return cop;
+		}
+	};
 }
+
+
+
+
+
+
