@@ -1,3 +1,4 @@
+//
 #include<string>
 #include<vector>
 #include <sstream>
@@ -173,8 +174,104 @@ namespace
            
             
         }
-
-
-
     };
+
+	class Codec3 {
+	public:
+        int str2int(std::string str)
+        {
+            int ans = 0;
+            int a = 1;
+            if (str[0] == '-')
+            {
+                for (int i = str.size() - 1; i >= 1; i--)
+                {
+                    ans += (str[i] - '0') * a;
+                    a *= 10;
+                }
+
+                return -ans;
+            }
+            else
+            {
+				for (int i = str.size() - 1; i >= 0; i--)
+				{
+					ans += (str[i] - '0') * a;
+					a *= 10;
+				}
+                return ans;
+            }
+        }
+
+
+        void f1(std::string& ans, TreeNode* node)
+        {
+            if (node == nullptr)
+            {
+                ans += "#,";
+                return;
+            }
+
+            std::string str = std::to_string(node->val);
+            ans += str;
+            ans += ",";
+
+            f1(ans, node->left);
+            f1(ans, node->right);
+        }
+
+		std::string serialize(TreeNode* root) {
+            std::string ans;
+            f1(ans, root);
+            return ans;
+		}
+
+        
+        TreeNode* f2(std::vector<int>& arr, int& pos)
+        {
+            if (pos == arr.size())
+            {
+                return nullptr;
+            }
+
+            if (arr[pos] == INT_MAX)
+            {
+                return nullptr;
+            }
+
+            TreeNode* node = new TreeNode(arr[pos]);
+            pos++;
+            node->left = f2(arr, pos);
+            pos++;
+            node->right = f2(arr, pos);
+            return node;
+        }
+
+		TreeNode* deserialize(std::string data) {
+            std::vector<int> arr;
+            int i = 0;
+            for (; i < data.size(); i++)
+            {
+                std::string tmp= "";
+                while (data[i] != ',')
+                {
+                    tmp += data[i];
+                    i++;
+                }
+                if (tmp == "#")
+                {
+                    arr.push_back(INT_MAX);
+                }
+                else
+                {
+                    arr.push_back(str2int(tmp));
+                }
+            }
+
+            int pos = 0;
+
+            return f2(arr, pos);
+
+		}
+	};
 }

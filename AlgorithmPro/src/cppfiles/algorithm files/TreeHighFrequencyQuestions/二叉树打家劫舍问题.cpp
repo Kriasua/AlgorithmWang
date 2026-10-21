@@ -1,3 +1,4 @@
+//https://leetcode.cn/problems/house-robber-iii/
 /*
 小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为 root 。
 
@@ -56,4 +57,28 @@ namespace
 
         }
     };
+
+	class Solution1 {
+	public:
+        std::pair<int, int> f(TreeNode* root)
+        {
+            if (root == nullptr)
+            {
+                return { 0,0 };
+            }
+
+            std::pair<int, int> left = f(root->left);
+            std::pair<int, int> right = f(root->right);
+
+            int p1 = root->val + left.second + right.second;
+            int p2 = std::max(left.first, left.second) + std::max(right.first, right.second);
+            return { p1,p2 };
+
+        }
+
+		int rob(TreeNode* root) {
+            std::pair<int, int> ans = f(root);
+            return std::max(ans.first, ans.second);
+		}
+	};
 }

@@ -48,5 +48,46 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution1 {
+	public:
+		using LL = long long int;
+		void f(TreeNode* root, LL sum, int target, std::unordered_map<LL, int>& map, int& ans)
+		{
+			if (root == nullptr)
+			{
+				return;
+			}
+
+			sum += root->val;
+			if (map.contains(sum - target))
+			{
+				ans += map[sum - target];
+			}
+
+			if (map.contains(sum))
+			{
+				map[sum]++;
+			}
+			else
+			{
+				map[sum] = 1;
+			}
+
+			f(root->left, sum, target, map, ans);
+			f(root->right, sum, target, map, ans);
+
+			map[sum]--;
+		}
+
+		int pathSum(TreeNode* root, int targetSum) {
+			std::unordered_map<LL, int> map;
+			map.emplace(0, 1);
+
+			int ans = 0;
+			f(root, 0, targetSum, map, ans);
+			return ans;
+		}
+	};
 }
 

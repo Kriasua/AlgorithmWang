@@ -1,4 +1,5 @@
-﻿#include<cmath>
+﻿
+#include<cmath>
 #include<algorithm>
 #include<cstdint>
 #include "pch.h"
@@ -79,4 +80,37 @@ namespace
                 helper(root->right, root, maxNode);
         }
     };
+
+	class Solution3 {
+	public:
+        using LL = long long int;
+        struct info
+        {
+            LL min;
+            LL max;
+            bool isBST;
+        };
+
+        info f(TreeNode* node)
+        {
+            if (node == nullptr)
+            {
+                return { (LL)INT_MAX+1, (LL)INT_MIN-1, true };
+            }
+
+            info left = f(node->left);
+            info right = f(node->right);
+
+            info ans;
+            ans.min = std::min(std::min(left.min, right.min), (LL)node->val);
+            ans.max = std::max(std::max(left.max, right.max), (LL)node->val);
+            ans.isBST = left.isBST && right.isBST && node->val > left.max && node->val < right.min;
+            return ans;
+        }
+
+		bool isValidBST(TreeNode* root) {
+            info ans = f(root);
+            return ans.isBST;
+		}
+	};
 }
