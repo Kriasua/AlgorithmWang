@@ -51,7 +51,38 @@ namespace
 
             return ans;
 
-        }
-        
+        } 
     };
+
+    using std::vector;
+	class Solution2 {
+	public:
+		void f(vector<vector<int>>& ans, vector<int>& path, vector<int>& nums, int i, std::set<vector<int>>& set)
+		{
+			if (i == nums.size())
+			{ 
+                if (!set.contains(path))
+                {
+                    ans.push_back(path);
+                    set.insert(path);
+                }
+				return;
+			}
+
+			f(ans, path, nums, i + 1, set);
+
+			path.push_back(nums[i]);
+			f(ans, path, nums, i + 1, set);
+			path.pop_back();
+		}
+
+		vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+			vector<vector<int>> ans;
+			vector<int> path;
+            std::set<vector<int>> set;
+            std::sort(nums.begin(), nums.end());
+            f(ans, path, nums, 0, set);
+            return ans;
+		}
+	};
 }

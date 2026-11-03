@@ -52,4 +52,28 @@ namespace
             return ans;
 		}
 	};
+
+	class Solution3 {
+	public:
+		int maxArea(std::vector<int>& height) {
+            int ans = 0;
+            int l = 0;
+            int r = height.size() - 1;
+
+            while (l < r)
+            {
+                ans = std::max(ans, (r - l) * std::min(height[l], height[r]));
+                if (height[l] < height[r])
+                {
+                    l++;
+                }
+                else
+                {
+                    r--;
+                }
+            }
+
+            return ans;
+		}
+	};
 }

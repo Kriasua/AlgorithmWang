@@ -1,6 +1,7 @@
 #include<vector>
 #include<unordered_set>
 #include "pch.h"
+#include<set>
 namespace 
 {
     class Solution {
@@ -78,4 +79,43 @@ namespace
             return ans;
         }
     };
+
+    using std::vector;
+	class Solution3 {
+	public:
+        void f(std::vector<bool>& visited, vector<vector<int>>& ans, vector<int>& path, vector<int>& nums, std::set<vector<int>>& set, int i)
+        {
+            if (i == nums.size())
+            {
+                if (!set.contains(path))
+                {
+                    ans.push_back(path);
+                    set.insert(path);
+                }
+                return;
+            }
+
+            for (int j = 0; j < visited.size(); j++)
+            {
+                if (visited[j])
+                {
+                    path.push_back(nums[j]);
+                    visited[j] = false;
+                    f(visited, ans, path, nums, set, i + 1);
+                    visited[j] = true;
+                    path.pop_back();
+                }
+            }
+        }
+
+		vector<vector<int>> permute(vector<int>& nums) {
+            std::vector<bool> visited(nums.size(), true);
+            vector<vector<int>> ans;
+            vector<int> path;
+            std::set<vector<int>> set;
+
+            f(visited, ans, path, nums, set, 0);
+            return ans;
+		}
+	};
 }

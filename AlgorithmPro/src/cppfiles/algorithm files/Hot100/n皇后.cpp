@@ -89,4 +89,50 @@ namespace
 			return ans;
 		}
 	};
+
+	class Solution3 {
+	public:
+		bool canPut(std::vector<int>& path,  int curRow, int wantCol)
+		{
+			for (int i = 0; i < curRow; i++)
+			{
+				if (path[i] == wantCol)
+				{
+					return false;
+				}
+
+				if (std::abs(curRow - i) == std::abs(wantCol - path[i]))
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		void f(std::vector<int>& path, int& ans, int curRow)
+		{
+			if (curRow == path.size())
+			{
+				ans++;
+				return;
+			}
+
+			for (int i = 0; i < path.size(); i++)
+			{
+				if (canPut(path, curRow, i))
+				{
+					path[curRow] = i;
+					f(path, ans, curRow+1);
+				}
+			}
+		}
+
+		int totalNQueens(int n) {
+			std::vector<int> path(n);
+			int ans = 0;
+			f(path, ans, 0);
+			return ans;
+		}
+	};
 }

@@ -320,6 +320,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\HashMap\统计有多少个不同字符串.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Heap.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\n皇后.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\三数之和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\两两交换链表中的节点.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\两数之和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\二叉搜索树中第k小的元素.cpp" />
@@ -331,6 +332,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\前K个高频元素.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\和为K的子数组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\子集.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\字母异位词分组.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\实现前缀树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\对称二叉树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\寻找旋转排序数组中的最小值.cpp" />
@@ -344,6 +346,7 @@
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\有序数组转二叉搜索树.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\柱状图中最大的矩形.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\矩阵置零.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\Hot100\移动零.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\组合总和.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\腐烂的橘子.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\Hot100\螺旋矩阵.cpp" />
@@ -411,6 +414,7 @@
     </ClCompile>
     <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\n皇后问题.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\原子数量.cpp" />
+    <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\子集.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\字符串的全部子序列.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\RecursiveQuestions\字符串解码.cpp" />
     <ClCompile Include="src\cppfiles\algorithm files\SlideWindow\找顺子.cpp" />

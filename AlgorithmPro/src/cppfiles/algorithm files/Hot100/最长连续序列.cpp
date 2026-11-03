@@ -2,6 +2,7 @@
 //最长连续序列
 #include<vector>
 #include<unordered_map>
+#include<unordered_set>
 
 namespace
 {
@@ -52,6 +53,38 @@ namespace
 				}
 			}
 
+			return ans;
+		}
+	};
+
+	class Solution2 {
+	public:
+		int longestConsecutive(std::vector<int>& nums) {
+			std::unordered_set<int> set;
+			for (int num : nums)
+			{
+				set.insert(num);
+			}
+
+			int ans = 0;
+			int curAns = 1;
+			for (int num : set)
+			{
+				if (set.contains(num - 1))
+				{
+					continue;
+				}
+				curAns = 1;
+				int i = 1;
+				while (set.contains(num + i))
+				{
+					curAns++;
+					i++;
+				}
+
+				ans = std::max(ans, curAns);
+
+			}
 			return ans;
 		}
 	};
